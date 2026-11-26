@@ -1,0 +1,812 @@
+[
+  {
+    "ufCodigo": "11",
+    "ano": 2019,
+    "populacao": 1777225
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2019,
+    "populacao": 881935
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2019,
+    "populacao": 4144597
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2019,
+    "populacao": 605761
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2019,
+    "populacao": 8602865
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2019,
+    "populacao": 845731
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2019,
+    "populacao": 1572866
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2019,
+    "populacao": 7075181
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2019,
+    "populacao": 3273227
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2019,
+    "populacao": 9132078
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2019,
+    "populacao": 3506853
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2019,
+    "populacao": 4018127
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2019,
+    "populacao": 9557071
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2019,
+    "populacao": 3337357
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2019,
+    "populacao": 2298696
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2019,
+    "populacao": 14873064
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2019,
+    "populacao": 21168791
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2019,
+    "populacao": 4018650
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2019,
+    "populacao": 17264943
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2019,
+    "populacao": 45919049
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2019,
+    "populacao": 11433957
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2019,
+    "populacao": 7164788
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2019,
+    "populacao": 11377239
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2019,
+    "populacao": 2778986
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2019,
+    "populacao": 3484466
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2019,
+    "populacao": 7018354
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2019,
+    "populacao": 3015268
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2020,
+    "populacao": 1796460
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2020,
+    "populacao": 894470
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2020,
+    "populacao": 4207714
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2020,
+    "populacao": 631181
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2020,
+    "populacao": 8690745
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2020,
+    "populacao": 861773
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2020,
+    "populacao": 1590248
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2020,
+    "populacao": 7114598
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2020,
+    "populacao": 3281480
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2020,
+    "populacao": 9187103
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2020,
+    "populacao": 3534165
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2020,
+    "populacao": 4039277
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2020,
+    "populacao": 9616621
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2020,
+    "populacao": 3351543
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2020,
+    "populacao": 2318822
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2020,
+    "populacao": 14930634
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2020,
+    "populacao": 21292666
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2020,
+    "populacao": 4064052
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2020,
+    "populacao": 17366189
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2020,
+    "populacao": 46289333
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2020,
+    "populacao": 11516840
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2020,
+    "populacao": 7252502
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2020,
+    "populacao": 11422973
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2020,
+    "populacao": 2809394
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2020,
+    "populacao": 3526220
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2020,
+    "populacao": 7113540
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2020,
+    "populacao": 3055149
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2021,
+    "populacao": 1815278
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2021,
+    "populacao": 906876
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2021,
+    "populacao": 4269995
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2021,
+    "populacao": 652713
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2021,
+    "populacao": 8777124
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2021,
+    "populacao": 877613
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2021,
+    "populacao": 1607363
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2021,
+    "populacao": 7153262
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2021,
+    "populacao": 3289290
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2021,
+    "populacao": 9240580
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2021,
+    "populacao": 3560903
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2021,
+    "populacao": 4059905
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2021,
+    "populacao": 9674793
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2021,
+    "populacao": 3365351
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2021,
+    "populacao": 2338474
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2021,
+    "populacao": 14985284
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2021,
+    "populacao": 21411923
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2021,
+    "populacao": 4108508
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2021,
+    "populacao": 17463349
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2021,
+    "populacao": 46649132
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2021,
+    "populacao": 11597484
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2021,
+    "populacao": 7338473
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2021,
+    "populacao": 11466630
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2021,
+    "populacao": 2839188
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2021,
+    "populacao": 3567234
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2021,
+    "populacao": 7206589
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2021,
+    "populacao": 3094325
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2024,
+    "populacao": 1746227
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2024,
+    "populacao": 880631
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2024,
+    "populacao": 4281209
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2024,
+    "populacao": 716793
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2024,
+    "populacao": 8664306
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2024,
+    "populacao": 802837
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2024,
+    "populacao": 1577342
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2024,
+    "populacao": 7010960
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2024,
+    "populacao": 3375646
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2024,
+    "populacao": 9233656
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2024,
+    "populacao": 3446071
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2024,
+    "populacao": 4145040
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2024,
+    "populacao": 9539029
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2024,
+    "populacao": 3220104
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2024,
+    "populacao": 2291077
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2024,
+    "populacao": 14850513
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2024,
+    "populacao": 21322691
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2024,
+    "populacao": 4102129
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2024,
+    "populacao": 17219679
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2024,
+    "populacao": 45973194
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2024,
+    "populacao": 11824665
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2024,
+    "populacao": 8058441
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2024,
+    "populacao": 11229915
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2024,
+    "populacao": 2901895
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2024,
+    "populacao": 3836399
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2024,
+    "populacao": 7350483
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2024,
+    "populacao": 2982818
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2025,
+    "populacao": 1751950
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2025,
+    "populacao": 884372
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2025,
+    "populacao": 4321616
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2025,
+    "populacao": 738772
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2025,
+    "populacao": 8711196
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2025,
+    "populacao": 806517
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2025,
+    "populacao": 1586859
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2025,
+    "populacao": 7018211
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2025,
+    "populacao": 3384547
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2025,
+    "populacao": 9268836
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2025,
+    "populacao": 3455236
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2025,
+    "populacao": 4164468
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2025,
+    "populacao": 9562007
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2025,
+    "populacao": 3220848
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2025,
+    "populacao": 2299425
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2025,
+    "populacao": 14870907
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2025,
+    "populacao": 21393441
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2025,
+    "populacao": 4126854
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2025,
+    "populacao": 17223547
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2025,
+    "populacao": 46081801
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2025,
+    "populacao": 11890517
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2025,
+    "populacao": 8187029
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2025,
+    "populacao": 11233263
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2025,
+    "populacao": 2924631
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2025,
+    "populacao": 3893659
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2025,
+    "populacao": 7423629
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2025,
+    "populacao": 2996899
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2026,
+    "populacao": 1757338
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2026,
+    "populacao": 887794
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2026,
+    "populacao": 4360926
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2026,
+    "populacao": 761012
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2026,
+    "populacao": 8756324
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2026,
+    "populacao": 809953
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2026,
+    "populacao": 1595994
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2026,
+    "populacao": 7024557
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2026,
+    "populacao": 3392617
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2026,
+    "populacao": 9302211
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2026,
+    "populacao": 3463737
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2026,
+    "populacao": 4182828
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2026,
+    "populacao": 9583176
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2026,
+    "populacao": 3221128
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2026,
+    "populacao": 2307255
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2026,
+    "populacao": 14889472
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2026,
+    "populacao": 21460311
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2026,
+    "populacao": 4150692
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2026,
+    "populacao": 17225410
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2026,
+    "populacao": 46179008
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2026,
+    "populacao": 11952456
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2026,
+    "populacao": 8312759
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2026,
+    "populacao": 11233317
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2026,
+    "populacao": 2946317
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2026,
+    "populacao": 3950330
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2026,
+    "populacao": 7495033
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2026,
+    "populacao": 3009996
+  }
+]

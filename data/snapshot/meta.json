@@ -1,0 +1,783 @@
+{
+  "geradoEm": "2026-11-26T17:42:18.814Z",
+  "duracaoSegundos": 51,
+  "versaoSchema": "1.0.0",
+  "agravo": "SRAG",
+  "metodologia": {
+    "tipo": "amostragem sistemática de páginas",
+    "limitePorPagina": 1000,
+    "paginasSolicitadas": 80,
+    "paginasTotais": 4446,
+    "passo": 56,
+    "registrosColetados": 79192,
+    "universoFonte": 4445192,
+    "fracaoAmostral": 0.017815,
+    "periodoObservado": {
+      "min": "2018-12-30",
+      "max": "2026-01-03"
+    },
+    "estimativa": "valor_estimado = valor_observado / fração amostral",
+    "referenciaTemporal": "dt_sin_pri (data de primeiros sintomas), com fallback para dt_notific"
+  },
+  "qualidade": {
+    "inconsistenciasData": 72525,
+    "inconsistenciasDataPct": 91.58,
+    "descricao": "Registros em que a data de notificação é anterior à data de primeiros sintomas — inconsistência presente no arquivo de origem.",
+    "divergenciaDias": {
+      "normal": 1284,
+      "ate7": 922,
+      "ate30": 4224,
+      "ate180": 42133,
+      "ate400": 30629,
+      "acima400": 0,
+      "amostra": 79192
+    }
+  },
+  "fontes": [
+    {
+      "id": "MS_DADOS_ABERTOS",
+      "nome": "API de Dados Abertos do Ministério da Saúde (DEMAS/SVSA)",
+      "orgao": "Ministério da Saúde",
+      "urlBase": "https://apidadosabertos.saude.gov.br",
+      "recurso": "/vigilancia-e-meio-ambiente/srag-2019-2026",
+      "documentacao": "https://apidadosabertos.saude.gov.br/v1/",
+      "licenca": "Dados abertos governamentais",
+      "requerAutenticacao": false,
+      "atualizacao": "conforme publicação do conjunto SRAG 2019-2026",
+      "granularidade": "notificação individual (microdado) agregada por UF e mês"
+    },
+    {
+      "id": "IBGE",
+      "nome": "API de Localidades, Malhas e Agregados do IBGE",
+      "orgao": "IBGE",
+      "urlBase": "https://servicodados.ibge.gov.br/api",
+      "documentacao": "https://servicodados.ibge.gov.br/api/docs",
+      "licenca": "Dados abertos (IBGE)",
+      "requerAutenticacao": false,
+      "atualizacao": "anual (estimativas populacionais)",
+      "granularidade": "UF e município"
+    },
+    {
+      "id": "ESUS_NOTIFICA",
+      "nome": "e-SUS Notifica (API restrita)",
+      "orgao": "Ministério da Saúde",
+      "urlBase": "https://esusnotifica.saude.gov.br",
+      "documentacao": "https://datasus.saude.gov.br/wp-content/uploads/2022/02/Manual-de-Utilizacao-da-API-e-Sus-Notifica.pdf",
+      "licenca": "Acesso autorizado",
+      "requerAutenticacao": true,
+      "atualizacao": "tempo real",
+      "granularidade": "notificação individual"
+    }
+  ],
+  "coletas": [
+    {
+      "fonte": "MS_DADOS_ABERTOS",
+      "recurso": "/vigilancia-e-meio-ambiente/srag-2019-2026",
+      "parametros": {
+        "limit": 1000,
+        "paginas": [
+          0,
+          56,
+          113,
+          169,
+          225,
+          281,
+          338,
+          394,
+          450,
+          506,
+          563,
+          619,
+          675,
+          731,
+          788,
+          844,
+          900,
+          957,
+          1013,
+          1069,
+          1125,
+          1182,
+          1238,
+          1294,
+          1350,
+          1407,
+          1463,
+          1519,
+          1575,
+          1632,
+          1688,
+          1744,
+          1801,
+          1857,
+          1913,
+          1969,
+          2026,
+          2082,
+          2138,
+          2194,
+          2251,
+          2307,
+          2363,
+          2419,
+          2476,
+          2532,
+          2588,
+          2644,
+          2701,
+          2757,
+          2813,
+          2870,
+          2926,
+          2982,
+          3038,
+          3095,
+          3151,
+          3207,
+          3263,
+          3320,
+          3376,
+          3432,
+          3488,
+          3545,
+          3601,
+          3657,
+          3714,
+          3770,
+          3826,
+          3882,
+          3939,
+          3995,
+          4051,
+          4107,
+          4164,
+          4220,
+          4276,
+          4332,
+          4389,
+          4445
+        ]
+      },
+      "iniciadoEm": "2026-11-26T17:41:27.383Z",
+      "finalizadoEm": "2026-11-26T17:42:18.814Z",
+      "httpStatus": 200,
+      "paginas": [
+        {
+          "page": 0,
+          "httpStatus": 200,
+          "ms": 2400,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 56,
+          "httpStatus": 200,
+          "ms": 5342,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 113,
+          "httpStatus": 200,
+          "ms": 5109,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 169,
+          "httpStatus": 200,
+          "ms": 5588,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 225,
+          "httpStatus": 200,
+          "ms": 2487,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 281,
+          "httpStatus": 200,
+          "ms": 1323,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 338,
+          "httpStatus": 200,
+          "ms": 1452,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 394,
+          "httpStatus": 200,
+          "ms": 1473,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 450,
+          "httpStatus": 200,
+          "ms": 2725,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 506,
+          "httpStatus": 200,
+          "ms": 1214,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 563,
+          "httpStatus": 200,
+          "ms": 1245,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 619,
+          "httpStatus": 200,
+          "ms": 1437,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 675,
+          "httpStatus": 200,
+          "ms": 1464,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 731,
+          "httpStatus": 200,
+          "ms": 1774,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 788,
+          "httpStatus": 200,
+          "ms": 1605,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 844,
+          "httpStatus": 200,
+          "ms": 3535,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 900,
+          "httpStatus": 200,
+          "ms": 1538,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 957,
+          "httpStatus": 200,
+          "ms": 1362,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1013,
+          "httpStatus": 200,
+          "ms": 1414,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1069,
+          "httpStatus": 200,
+          "ms": 1363,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1125,
+          "httpStatus": 200,
+          "ms": 1329,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1182,
+          "httpStatus": 200,
+          "ms": 1331,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1238,
+          "httpStatus": 200,
+          "ms": 1094,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1294,
+          "httpStatus": 200,
+          "ms": 3284,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1350,
+          "httpStatus": 200,
+          "ms": 1673,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1407,
+          "httpStatus": 200,
+          "ms": 1228,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1463,
+          "httpStatus": 200,
+          "ms": 1422,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1519,
+          "httpStatus": 200,
+          "ms": 2335,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1575,
+          "httpStatus": 200,
+          "ms": 2522,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1632,
+          "httpStatus": 200,
+          "ms": 2458,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1688,
+          "httpStatus": 200,
+          "ms": 3067,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1744,
+          "httpStatus": 200,
+          "ms": 1682,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1801,
+          "httpStatus": 200,
+          "ms": 1570,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1857,
+          "httpStatus": 200,
+          "ms": 1638,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1913,
+          "httpStatus": 200,
+          "ms": 1352,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 1969,
+          "httpStatus": 200,
+          "ms": 1396,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2026,
+          "httpStatus": 200,
+          "ms": 1821,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2082,
+          "httpStatus": 200,
+          "ms": 1550,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2138,
+          "httpStatus": 200,
+          "ms": 1364,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2194,
+          "httpStatus": 200,
+          "ms": 1281,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2251,
+          "httpStatus": 200,
+          "ms": 1733,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2307,
+          "httpStatus": 200,
+          "ms": 2313,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2363,
+          "httpStatus": 200,
+          "ms": 1504,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2419,
+          "httpStatus": 200,
+          "ms": 1560,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2476,
+          "httpStatus": 200,
+          "ms": 1160,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2532,
+          "httpStatus": 200,
+          "ms": 1269,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2588,
+          "httpStatus": 200,
+          "ms": 1300,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2644,
+          "httpStatus": 200,
+          "ms": 1822,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2701,
+          "httpStatus": 200,
+          "ms": 1215,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2757,
+          "httpStatus": 200,
+          "ms": 1208,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2813,
+          "httpStatus": 200,
+          "ms": 1595,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2870,
+          "httpStatus": 200,
+          "ms": 1383,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2926,
+          "httpStatus": 200,
+          "ms": 1837,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 2982,
+          "httpStatus": 200,
+          "ms": 1236,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3038,
+          "httpStatus": 200,
+          "ms": 1308,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3095,
+          "httpStatus": 200,
+          "ms": 1640,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3151,
+          "httpStatus": 200,
+          "ms": 1241,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3207,
+          "httpStatus": 200,
+          "ms": 2415,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3263,
+          "httpStatus": 200,
+          "ms": 1288,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3320,
+          "httpStatus": 200,
+          "ms": 1804,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3376,
+          "httpStatus": 200,
+          "ms": 1984,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3432,
+          "httpStatus": 200,
+          "ms": 1574,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3488,
+          "httpStatus": 200,
+          "ms": 1932,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3545,
+          "httpStatus": 200,
+          "ms": 1183,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3601,
+          "httpStatus": 200,
+          "ms": 1337,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3657,
+          "httpStatus": 200,
+          "ms": 1466,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3714,
+          "httpStatus": 200,
+          "ms": 1321,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3770,
+          "httpStatus": 200,
+          "ms": 1962,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3826,
+          "httpStatus": 200,
+          "ms": 1312,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3882,
+          "httpStatus": 200,
+          "ms": 1434,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3939,
+          "httpStatus": 200,
+          "ms": 1554,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 3995,
+          "httpStatus": 200,
+          "ms": 1480,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4051,
+          "httpStatus": 200,
+          "ms": 1463,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4107,
+          "httpStatus": 200,
+          "ms": 1625,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4164,
+          "httpStatus": 200,
+          "ms": 1293,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4220,
+          "httpStatus": 200,
+          "ms": 1291,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4276,
+          "httpStatus": 200,
+          "ms": 1155,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4332,
+          "httpStatus": 200,
+          "ms": 1799,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4389,
+          "httpStatus": 200,
+          "ms": 1304,
+          "registros": 1000,
+          "erro": null
+        },
+        {
+          "page": 4445,
+          "httpStatus": 200,
+          "ms": 1063,
+          "registros": 192,
+          "erro": null
+        }
+      ],
+      "registros": 79192,
+      "totalFonte": 4445192,
+      "fracaoAmostral": 0.017815,
+      "status": "sucesso"
+    }
+  ],
+  "totais": {
+    "ufsComDados": 27,
+    "registrosAmostrados": 79192,
+    "universoFonte": 4445192,
+    "fracaoAmostralGlobal": 0.017815
+  },
+  "perfilGlobal": {
+    "classificacao": {
+      "Não informado": 24338,
+      "SRAG não especificado": 19726,
+      "SRAG por COVID-19": 27624,
+      "SRAG por Influenza": 2025,
+      "SRAG por outro agente etiológico": 473,
+      "SRAG por outro vírus respiratório": 5006
+    },
+    "evolucao": {
+      "Cura": 39513,
+      "Ignorado": 27738,
+      "Óbito por outras causas": 1061,
+      "Óbito por SRAG": 10880
+    },
+    "uti": {
+      "Ignorado": 12066,
+      "Não": 44782,
+      "Sim": 22344
+    },
+    "hospitalizacao": {
+      "Ignorado": 2155,
+      "Não": 1857,
+      "Sim": 75180
+    },
+    "vacinaGripe": {
+      "Ignorado": 44220,
+      "Não": 26403,
+      "Sim": 8569
+    },
+    "sexo": {
+      "Feminino": 36969,
+      "Ignorado": 9,
+      "Masculino": 42214
+    },
+    "faixaEtaria": {
+      "< 1 ano": 6513,
+      "1-4 anos": 6026,
+      "12-17 anos": 932,
+      "18-29 anos": 3478,
+      "30-59 anos": 25260,
+      "5-11 anos": 3056,
+      "60+ anos": 33927
+    }
+  }
+}

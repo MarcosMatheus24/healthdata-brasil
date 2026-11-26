@@ -1,0 +1,191 @@
+[
+  {
+    "codigo": "12",
+    "sigla": "AC",
+    "nome": "Acre",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  },
+  {
+    "codigo": "27",
+    "sigla": "AL",
+    "nome": "Alagoas",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "16",
+    "sigla": "AP",
+    "nome": "Amapá",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  },
+  {
+    "codigo": "13",
+    "sigla": "AM",
+    "nome": "Amazonas",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  },
+  {
+    "codigo": "29",
+    "sigla": "BA",
+    "nome": "Bahia",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "23",
+    "sigla": "CE",
+    "nome": "Ceará",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "53",
+    "sigla": "DF",
+    "nome": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "regiaoSigla": "CO"
+  },
+  {
+    "codigo": "32",
+    "sigla": "ES",
+    "nome": "Espírito Santo",
+    "regiao": "Sudeste",
+    "regiaoSigla": "SE"
+  },
+  {
+    "codigo": "52",
+    "sigla": "GO",
+    "nome": "Goiás",
+    "regiao": "Centro-Oeste",
+    "regiaoSigla": "CO"
+  },
+  {
+    "codigo": "21",
+    "sigla": "MA",
+    "nome": "Maranhão",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "51",
+    "sigla": "MT",
+    "nome": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "regiaoSigla": "CO"
+  },
+  {
+    "codigo": "50",
+    "sigla": "MS",
+    "nome": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "regiaoSigla": "CO"
+  },
+  {
+    "codigo": "31",
+    "sigla": "MG",
+    "nome": "Minas Gerais",
+    "regiao": "Sudeste",
+    "regiaoSigla": "SE"
+  },
+  {
+    "codigo": "15",
+    "sigla": "PA",
+    "nome": "Pará",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  },
+  {
+    "codigo": "25",
+    "sigla": "PB",
+    "nome": "Paraíba",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "41",
+    "sigla": "PR",
+    "nome": "Paraná",
+    "regiao": "Sul",
+    "regiaoSigla": "S"
+  },
+  {
+    "codigo": "26",
+    "sigla": "PE",
+    "nome": "Pernambuco",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "22",
+    "sigla": "PI",
+    "nome": "Piauí",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "33",
+    "sigla": "RJ",
+    "nome": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "regiaoSigla": "SE"
+  },
+  {
+    "codigo": "24",
+    "sigla": "RN",
+    "nome": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "43",
+    "sigla": "RS",
+    "nome": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "regiaoSigla": "S"
+  },
+  {
+    "codigo": "11",
+    "sigla": "RO",
+    "nome": "Rondônia",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  },
+  {
+    "codigo": "14",
+    "sigla": "RR",
+    "nome": "Roraima",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  },
+  {
+    "codigo": "42",
+    "sigla": "SC",
+    "nome": "Santa Catarina",
+    "regiao": "Sul",
+    "regiaoSigla": "S"
+  },
+  {
+    "codigo": "35",
+    "sigla": "SP",
+    "nome": "São Paulo",
+    "regiao": "Sudeste",
+    "regiaoSigla": "SE"
+  },
+  {
+    "codigo": "28",
+    "sigla": "SE",
+    "nome": "Sergipe",
+    "regiao": "Nordeste",
+    "regiaoSigla": "NE"
+  },
+  {
+    "codigo": "17",
+    "sigla": "TO",
+    "nome": "Tocantins",
+    "regiao": "Norte",
+    "regiaoSigla": "N"
+  }
+]
