@@ -104,7 +104,7 @@ async function carregarDoBanco(): Promise<Base> {
   });
 
   try {
-    const [ufs, populacao, indicadores, perfis, coletas, municipios] = await Promise.all([
+    const [ufs, populacao, indicadores, perfis, coletas, municipios, indiceMunicipios] = await Promise.all([
       pool.query("SELECT codigo_ibge, sigla, nome, regiao FROM uf ORDER BY nome"),
       pool.query("SELECT uf_codigo, ano, populacao FROM populacao"),
       pool.query("SELECT agravo, uf_codigo, ano, mes, metrica, valor_amostra, valor_estimado FROM indicador"),
@@ -113,6 +113,10 @@ async function carregarDoBanco(): Promise<Base> {
       pool.query(
         "SELECT COALESCE(agravo, 'SRAG') AS agravo, uf_codigo, municipio_codigo, municipio_nome, amostra, estimado FROM municipio_amostra",
       ),
+      // índice IBGE de municípios (tabela criada em db/schema.sql v3); sem ela, usa lista vazia
+      pool
+        .query("SELECT m.codigo_ibge, m.nome, m.uf_codigo, u.sigla FROM municipio m JOIN uf u ON u.codigo_ibge = m.uf_codigo")
+        .catch(() => ({ rows: [] as { codigo_ibge: string; nome: string; uf_codigo: string; sigla: string }[] })),
     ]);
 
     const ufList: UF[] = ufs.rows.map((r) => ({
@@ -302,7 +306,14 @@ async function carregarDoBanco(): Promise<Base> {
       ufs: ufList,
       populacao: popList,
       srag,
-      municipios: [],
+      municipios: indiceMunicipios.rows.length
+        ? indiceMunicipios.rows.map((r) => ({
+            codigo: String(r.codigo_ibge),
+            nome: r.nome,
+            ufCodigo: String(r.uf_codigo),
+            ufSigla: r.sigla,
+          }))
+        : (municipiosJson as unknown as Municipio[]),
       agravos,
     };
   } finally {

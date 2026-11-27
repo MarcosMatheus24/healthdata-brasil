@@ -15,6 +15,8 @@
  *   npm run etl -- --agravos=zika,febreamarela # só alguns
  *   npm run etl -- --importar=coleta.json      # grava o resultado de uma coleta feita no navegador
  *   npm run etl -- --so-seed                   # só regenera db/seed.sql a partir dos snapshots
+ *   npm run etl -- --enviar                    # depois de coletar, envia ao Supabase (precisa de DATABASE_URL)
+ *   npm run etl -- --so-enviar                 # só envia os snapshots atuais ao Supabase (= npm run supabase)
  *
  * Desenho de coleta (detalhes em scripts/coleta-nucleo.mjs):
  *  - SRAG: a rota informa total_registros → amostra sistemática de páginas.
@@ -57,6 +59,7 @@ import {
   perfilGlobal,
   somaVerificacao,
 } from "./coleta-nucleo.mjs";
+import { enviarParaBanco } from "./enviar-supabase.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -647,9 +650,11 @@ export function gerarSeed() {
 const COLETORES = { srag: coletarSrag, dengue: coletarDengue, zika: coletarZika, febreamarela: coletarFebreAmarela };
 
 function argumentos(argv) {
-  const a = { agravos: Object.keys(COLETORES), soSeed: false, importar: null };
+  const a = { agravos: Object.keys(COLETORES), soSeed: false, importar: null, enviar: false, soEnviar: false };
   for (const arg of argv) {
     if (arg === "--so-seed") a.soSeed = true;
+    if (arg === "--enviar") a.enviar = true;
+    if (arg === "--so-enviar") a.soEnviar = true;
     const m = arg.match(/^--agravos=(.+)$/);
     if (m) a.agravos = m[1].split(",").map((s) => s.trim().toLowerCase().replace("febre-amarela", "febreamarela").replace("zikavirus", "zika"));
     const i = arg.match(/^--importar=(.+)$/);
@@ -676,9 +681,15 @@ export async function main(argv = process.argv.slice(2)) {
     return { ok: [], falhas: [] };
   }
 
+  if (args.soEnviar) {
+    await enviarParaBanco();
+    return { ok: ["enviado"], falhas: [] };
+  }
+
   if (args.importar) {
     await importarColeta(path.resolve(args.importar), territoriosDoSnapshot());
     gerarSeed();
+    if (args.enviar) await enviarParaBanco();
     return { ok: ["importado"], falhas: [] };
   }
 
@@ -697,6 +708,15 @@ export async function main(argv = process.argv.slice(2)) {
   }
 
   gerarSeed();
+  if (args.enviar) {
+    // a coleta já está salva nos snapshots; se o envio falhar, `npm run supabase` tenta de novo sem recoletar
+    try {
+      await enviarParaBanco();
+    } catch (err) {
+      falhas.push("supabase");
+      log(`Envio ao Supabase falhou: ${err.message ?? err}`);
+    }
+  }
   log(`Concluído em ${Math.round((Date.now() - t0) / 1000)}s — ok: ${ok.join(", ") || "nenhum"}${falhas.length ? ` · falhas: ${falhas.join(", ")}` : ""}`);
   return { ok, falhas };
 }

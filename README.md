@@ -112,7 +112,22 @@ npm run dev          # http://localhost:3000
 
 Sem `DATABASE_URL`, o app usa o snapshot versionado (modo declarado na interface).
 
-### Com PostgreSQL
+### Com Supabase (recomendado)
+
+1. No Supabase, abra **SQL Editor** e execute o conteúdo de `db/schema.sql` (cria tabelas, visões e RLS; pode rodar de novo sem perder dados).
+2. Copie `.env.example` para `.env.local` e preencha `DATABASE_URL` (Project Settings → Database → Connection string → URI).
+3. Envie os dados coletados da API:
+
+```bash
+npm run supabase:teste   # mostra o que seria gravado, sem conectar
+npm run supabase         # grava no Supabase (uma transação; falha não apaga dado bom)
+npm run etl:supabase     # coleta na API do MS/IBGE e já envia
+```
+
+Com `DATABASE_URL` definida, o site passa a ler do Supabase (`origemDados: "postgres"` em `/api/fontes/status`).
+Na Vercel, adicione a mesma `DATABASE_URL` (use o *Transaction pooler*, porta 6543).
+
+### Com PostgreSQL comum
 
 ```bash
 createdb healthdata

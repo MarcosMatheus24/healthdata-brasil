@@ -12,6 +12,9 @@
     "etl:srag": "node scripts/etl.mjs --agravos=srag",
     "etl:dengue": "node scripts/etl.mjs --agravos=dengue",
     "seed": "node scripts/etl.mjs --so-seed",
+    "supabase": "node scripts/enviar-supabase.mjs",
+    "supabase:teste": "node scripts/enviar-supabase.mjs --dry-run",
+    "etl:supabase": "node scripts/etl.mjs --enviar",
     "etl:zika": "node scripts/etl.mjs --agravos=zika",
     "etl:febreamarela": "node scripts/etl.mjs --agravos=febreamarela"
   },
