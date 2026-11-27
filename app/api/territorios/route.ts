@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getBase, populacaoDaUf } from "@/lib/data";
+import { lerAgravo } from "@/lib/agravos";
+import { dadosAgravo, getBase, populacaoDaUf } from "@/lib/data";
 
 export const revalidate = 3600;
 
@@ -14,6 +15,7 @@ export async function GET(request: Request) {
   const base = await getBase();
   const ufFiltro = searchParams.get("uf")?.toUpperCase();
   const codigo = searchParams.get("codigo");
+  const agravo = lerAgravo(searchParams.get("agravo")) ?? "srag";
 
   if (codigo) {
     const limpo = codigo.replace(/\D/g, "");
@@ -39,7 +41,8 @@ export async function GET(request: Request) {
         populacao: pop.valor,
         populacaoAno: pop.ano,
         municipios: base.municipios.filter((m) => m.ufCodigo === u.codigo).length,
-        municipiosAmostrados: base.srag.find((s) => s.ufSigla === u.sigla)?.municipiosAmostra ?? [],
+        agravo,
+        municipiosAmostrados: dadosAgravo(base, agravo).ufs.find((s) => s.ufSigla === u.sigla)?.municipiosAmostra ?? [],
       };
     });
 

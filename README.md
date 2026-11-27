@@ -1,6 +1,6 @@
 # HealthData Brasil
 
-Portal educacional de vigilância em saúde que integra a **API de Dados Abertos do Ministério da Saúde** (SRAG 2019–2026) e as **APIs do IBGE** (localidades, malha territorial e população residente) para produzir indicadores agregados por unidade da federação — com proveniência declarada, validação de schema, estados de interface explícitos e exportação em CSV.
+Portal educacional de vigilância em saúde que integra a **API de Dados Abertos do Ministério da Saúde** (SRAG, Dengue, Zika e Febre amarela) e as **APIs do IBGE** (localidades, malha territorial e população residente) para produzir indicadores agregados por unidade da federação — com proveniência declarada, validação de schema, estados de interface explícitos e exportação em CSV.
 
 > **Projeto Integrador — AV2 · Vigilância em Saúde**
 > Os números publicados são **estimativas amostrais** produzidas por este projeto. Não são boletins oficiais e não servem para decisão clínica.
@@ -30,8 +30,8 @@ Portal educacional de vigilância em saúde que integra a **API de Dados Abertos
 ## Páginas
 
 - `/` — apresentação, indicadores-chave, pipeline, fontes e equipe
-- `/dashboard` — filtros por ano, UF e métrica; ranking, série mensal, perfis, tabela e exportação CSV
-- `/mapa` — coroplético das 27 UFs com painel lateral, qualidade territorial e hachura para "sem dados"
+- `/dashboard` — filtro de **doença**, ano, UF e métrica; ranking, série mensal, perfis, tabela e exportação CSV (`/dashboard?agravo=dengue`)
+- `/mapa` — coroplético das 27 UFs por doença, com painel lateral, qualidade territorial e hachura para "sem dados" (`/mapa?agravo=zika`)
 - `/integracoes` — estado das fontes, console de validação real (7 estados), checklist de conexão e catálogo da API
 - `/metodologia` — fórmula dos indicadores, amostragem, inconsistências do arquivo, LGPD, limites, glossário e referências
 
@@ -40,11 +40,55 @@ Portal educacional de vigilância em saúde que integra a **API de Dados Abertos
 | Método | Rota | Descrição |
 | --- | --- | --- |
 | GET | `/api/fontes/status` | Estado das fontes, sem expor segredos |
-| GET | `/api/indicadores?ano=&uf=` | Agregados validados por UF e período |
-| GET | `/api/territorios?uf=&codigo=` | Códigos IBGE e validação territorial |
+| GET | `/api/agravos` | Doenças monitoradas, definição de caso e estado da coleta de cada uma |
+| GET | `/api/indicadores?agravo=&ano=&uf=` | Agregados por doença (`srag`, `dengue`, `zika`, `febreamarela`), UF e período |
+| GET | `/api/territorios?uf=&codigo=&agravo=` | Códigos IBGE, validação territorial e municípios por doença |
 | POST | `/api/integracoes/validar` | Ação restrita, executada no servidor (allowlist + timeout de 25 s) |
-| GET | `/api/export?ano=&uf=` | CSV agregado com cabeçalho de proveniência |
+| GET | `/api/export?agravo=&ano=&uf=` | CSV por doença com cabeçalho de proveniência e definição de caso (409 se a doença não tem coleta) |
 | GET | `/api/saude` | Verificação de saúde do serviço |
+
+## Doenças monitoradas
+
+Cada doença declara **o que conta como caso** — e esse rótulo aparece em todo cartão, tabela e CSV.
+
+| Doença | O que é contado | Recurso (MS Dados Abertos) | Coleta | Situação |
+| --- | --- | --- | --- | --- |
+| SRAG | Notificações de SRAG hospitalizada (SIVEP-Gripe) | `/vigilancia-e-meio-ambiente/srag-2019-2026` | Amostragem sistemática | ✅ dados reais |
+| Zika | Casos prováveis: notificações do SINAN exceto descartadas (`classi_fin` 2) | `/arboviroses/zikavirus` | Censo por ano (`nu_ano`), 225.752 registros 2019–2026 | ✅ dados reais (27/11/2026) |
+| Febre amarela | Casos humanos confirmados, por local provável de infecção | `/arboviroses/febre-amarela-humanos-primatas-nao-humanos` | Censo, 2.913 registros 1994–2026 | ✅ dados reais (27/11/2026) |
+| Dengue | Casos prováveis: notificações do SINAN exceto descartadas (`classi_fin` 5) | `/arboviroses/dengue` | — | ❌ a API não alcança 2019+ (ver abaixo) |
+
+Doença sem coleta aparece como **"aguardando coleta"** ou **"coleta falhou"** com o motivo: a API responde
+`disponivel: false`, o CSV é recusado com 409 e a interface não mostra zeros.
+
+### Por que a Dengue não tem dados
+
+Verificado em 27/11/2026: a rota `/arboviroses/dengue` não informa `total_registros`, o filtro `nu_ano`
+devolve **502** (também combinado com `id_municip`) e a série começa em **2000**. Os registros de 2019+
+ficam a dezenas de milhões de posições, e a latência cresce ~7 s por milhão de `offset` até o corte de
+60 s do servidor. Alternativas: arquivos anuais do SINAN (CSV no portal de dados abertos) ou o
+painel de arboviroses do MS.
+
+### Coletar
+
+```bash
+npm run etl                          # todas as doenças + IBGE + seed
+npm run etl -- --agravos=zika        # só uma (srag, dengue, zika, febreamarela)
+npm run etl -- --importar=coleta.json  # resultado de uma coleta feita no navegador
+npm run seed                         # só regenera db/seed.sql a partir dos snapshots
+```
+
+Se a sua rede não alcança a API do MS, colete pelo navegador: `scripts/coleta-navegador.md`.
+
+### O que a API do MS faz diferente da documentação
+
+- **`offset` é o índice do registro inicial, não o número da página.** `offset=1&limit=1000` repete 999
+  registros de `offset=0`. O coletor detecta o modo a cada execução (`detectarModoOffset`).
+- `campos=` faz o servidor estourar o tempo (502) — o coletor não usa.
+- Campos vazios do SINAN chegam como o texto `"nan"`.
+
+Cada doença é coletada de forma independente: se uma falhar, as outras seguem, e **uma falha nunca apaga
+um snapshot bom anterior**. Cada coleta guarda uma soma de verificação dos dados.
 
 ## Como o dado é produzido
 

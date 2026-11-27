@@ -1,3 +1,5 @@
+import type { AgravoId } from "@/lib/agravos";
+
 export type UF = {
   codigo: string;
   sigla: string;
@@ -45,11 +47,42 @@ export type SragUF = {
   porAnoEstimado: Record<string, number>;
   porMes: Record<string, number>;
   porMesEstimado: Record<string, number>;
+  /** Óbitos por ano de referência (coletas a partir da v2 do ETL). */
+  obitosPorAno?: Record<string, number>;
+  obitosPorAnoEstimado?: Record<string, number>;
   perfil: PerfilUF;
   municipiosAmostra: MunicipioAmostra[];
 };
 
+/** Mesmo formato para qualquer agravo: SRAG, Dengue, Zika, Febre amarela. */
+export type AgravoUF = SragUF;
+
+export type EstadoColeta = "coletado" | "pendente" | "erro";
+
+export type Metodologia = Meta["metodologia"];
+
+/**
+ * Snapshot de um agravo (data/snapshot/agravos/<id>.json).
+ * `estado: "pendente"` significa que o ETL ainda não rodou para esse agravo —
+ * a interface mostra "aguardando primeira coleta" em vez de zeros.
+ */
+export type DadosAgravo = {
+  agravo: AgravoId;
+  estado: EstadoColeta;
+  mensagem?: string | null;
+  geradoEm: string | null;
+  metodologia: Metodologia | null;
+  coleta: Coleta | null;
+  /** Registros da fonte lidos na amostra antes de aplicar a definição de caso. */
+  registrosLidos?: number | null;
+  /** Campos recebidos da API na última coleta (auditoria de schema). */
+  camposFonte?: string[];
+  perfilGlobal?: PerfilUF | null;
+  ufs: AgravoUF[];
+};
+
 export type Coleta = {
+  agravo?: AgravoId;
   fonte: string;
   recurso: string;
   parametros: Record<string, unknown>;

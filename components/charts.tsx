@@ -9,11 +9,13 @@ export function BarRanking({
   unidade = "",
   destacar,
   maxItens = 10,
+  formatar = int,
 }: {
   dados: { rotulo: string; valor: number; sub?: string }[];
   unidade?: string;
   destacar?: string;
   maxItens?: number;
+  formatar?: (n: number) => string;
 }) {
   const lista = dados.slice(0, maxItens);
   const max = Math.max(...lista.map((d) => d.valor), 1);
@@ -54,7 +56,7 @@ export function BarRanking({
               </div>
             </div>
             <span className="mono text-right text-[0.8rem] font-medium tabular-nums text-ink">
-              {int(d.valor)}
+              {formatar(d.valor)}
               <span className="ml-1 text-[0.6rem] font-normal text-ink-mute">{unidade}</span>
             </span>
           </li>
@@ -317,5 +319,46 @@ export function Distribuicao({
         ))}
       </ul>
     </div>
+  );
+}
+
+/** Minigráfico de linha para cartões: só a forma da série, sem eixos. */
+export function Sparkline({
+  dados,
+  cor = "var(--color-brand)",
+  altura = 44,
+}: {
+  dados: { mes: string; valor: number }[];
+  cor?: string;
+  altura?: number;
+}) {
+  const uid = useId().replace(/[^a-zA-Z0-9_-]/g, "");
+  if (dados.length < 2) return null;
+  const w = 240;
+  const max = Math.max(...dados.map((d) => d.valor), 1);
+  const pts = dados.map((d, i) => [(i / (dados.length - 1)) * w, altura - 3 - (d.valor / max) * (altura - 6)] as const);
+  const linha = pts.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
+  const ultimo = pts[pts.length - 1];
+  return (
+    <svg viewBox={`0 0 ${w} ${altura}`} className="h-11 w-full overflow-visible" aria-hidden preserveAspectRatio="none">
+      <defs>
+        <linearGradient id={`sp-${uid}`} x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stopColor={cor} stopOpacity="0.25" />
+          <stop offset="100%" stopColor={cor} stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <path d={`${linha} L${w},${altura} L0,${altura} Z`} fill={`url(#sp-${uid})`} className="fade-in" />
+      <path
+        d={linha}
+        fill="none"
+        stroke={cor}
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+        pathLength={1}
+        className="draw-line"
+      />
+      <circle cx={ultimo[0]} cy={ultimo[1]} r="2.6" fill={cor} className="fade-in" />
+    </svg>
   );
 }

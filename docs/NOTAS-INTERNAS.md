@@ -48,3 +48,23 @@ GET /api/territorios, POST /api/integracoes/validar; exportação CSV com proven
 - API: /api/fontes/status, /api/indicadores, /api/territorios, /api/integracoes/validar, /api/export, /api/saude.
 - GitHub: conta `MarcosMatheus24` (gh autenticado). Vercel: time `marcosmatheus24s-projects` (hobby),
   MCP disponível (create_git_project).
+
+## v2.1 — multiagravo (nov/2026)
+- Catálogo em `lib/agravos.ts` (srag, dengue, zika, febreamarela) com definição de caso explícita.
+- Snapshots por doença em `data/snapshot/agravos/*.json` (estado: coletado | pendente | erro).
+  SRAG continua em `meta.json` + `srag.json` (formato original preservado).
+- Núcleo de coleta sem dependências de Node em `scripts/coleta-nucleo.mjs` (roda no ETL e no navegador).
+
+### Comportamento da API do MS verificado em 27/11/2026
+- **`offset` é índice de REGISTRO, não de página** (contrário à documentação): `offset=1&limit=1000`
+  repete 999 registros de `offset=0`. Quando o SRAG deste projeto foi coletado, a rota se
+  comportava como página (o snapshot mostra anos espalhados nos mesmos offsets). O ETL agora
+  detecta o modo a cada coleta (`detectarModoOffset`).
+- `campos=` faz o servidor estourar o tempo (502 Proxy Error) em várias rotas: não usar.
+- Zika e Dengue não informam `total_registros`: universo medido por busca binária com `limit=1`.
+- Zika aceita `nu_ano` (rápido). Dengue devolve 502 com `nu_ano`.
+- Latência cresce com o offset (~7 s por milhão de registros); o proxy corta em 60 s.
+  Dengue começa em 2000: os registros de 2019+ ficam fora do alcance por offset.
+- Febre amarela (humanos): 2.913 registros, 1994–mai/2026, território = local provável de infecção.
+- Campos vazios do SINAN chegam como o texto "nan".
+- Duplicatas idênticas na fonte: ~0,1–0,2% por ano no Zika (registradas em `estratos[].duplicados`).

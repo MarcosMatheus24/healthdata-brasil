@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { coberturaGlobal, getBase, statusFontes } from "@/lib/data";
+import { coberturaGlobal, getBase, statusAgravos, statusFontes } from "@/lib/data";
 
 export const revalidate = 60;
 
@@ -18,6 +18,14 @@ export async function GET() {
       origemDados: base.origem,
       coberturaGlobalPct: Number(coberturaGlobal(base).toFixed(3)),
       fontes,
+      agravos: statusAgravos(base).map((a) => ({
+        id: a.id,
+        nome: a.nome,
+        recurso: a.recurso,
+        estado: a.estado,
+        ultimaColeta: a.ultimaColeta,
+        mensagem: a.mensagem,
+      })),
       aviso:
         "Este endpoint não expõe credenciais. Integrações restritas (e-SUS Notifica) permanecem desabilitadas até autorização formal.",
     },

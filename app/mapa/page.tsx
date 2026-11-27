@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
-import { anosDisponiveis,
-  anoReferencia, getBase, linhasIndicadores } from "@/lib/data";
+import { anoReferencia, agravoDisponivel, anosDisponiveis, dadosAgravo, getBase, linhasIndicadores, statusAgravos } from "@/lib/data";
+import { AGRAVO_PADRAO, lerAgravo } from "@/lib/agravos";
 import { MapaClient } from "@/components/mapa-client";
 import { SectionLabel } from "@/components/ui";
-
-export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Mapa territorial",
   description:
-    "Mapa coroplético das unidades da federação com taxa de SRAG por 100 mil habitantes, associação por código IBGE e leitura explícita de incerteza.",
+    "Mapa coroplético das unidades da federação com taxa por 100 mil habitantes de SRAG, Dengue, Zika e Febre amarela, associação por código IBGE e leitura explícita de incerteza.",
 };
 
-export default async function MapaPage() {
+export default async function MapaPage({ searchParams }: { searchParams: Promise<{ agravo?: string }> }) {
+  const { agravo: agravoParam } = await searchParams;
+  const agravo = lerAgravo(agravoParam) ?? AGRAVO_PADRAO;
   const base = await getBase();
-  const anos = anosDisponiveis(base);
-  const ano = anoReferencia(base);
-  const linhas = linhasIndicadores(base, { ano });
+  const disponivel = agravoDisponivel(base, agravo);
+  const dados = dadosAgravo(base, agravo);
+  const anos = disponivel ? anosDisponiveis(base, agravo) : [];
+  const ano = disponivel ? anoReferencia(base, agravo) : new Date().getFullYear() - 1;
+  const linhas = disponivel ? linhasIndicadores(base, { ano, agravo }) : [];
 
   return (
     <>
@@ -36,14 +38,19 @@ export default async function MapaPage() {
 
       <MapaClient
         ufs={base.ufs}
-        anos={anos}
-        anoInicial={ano}
-        linhasIniciais={linhas}
-        municipiosPorUf={Object.fromEntries(
-          base.srag.map((s) => [s.ufSigla, s.municipiosAmostra]),
-        )}
-        cobertura={base.meta.metodologia.fracaoAmostral}
-        coleta={base.meta.coletas?.[0]?.finalizadoEm ?? base.meta.geradoEm}
+        estados={statusAgravos(base).map((e) => ({ id: e.id, estado: e.estado }))}
+        inicial={{
+          agravo,
+          disponivel,
+          estado: disponivel ? "coletado" : dados.estado === "erro" ? "erro" : "pendente",
+          mensagem: disponivel ? null : dados.mensagem ?? null,
+          anos,
+          ano,
+          linhas,
+          municipiosPorUf: Object.fromEntries(dados.ufs.map((s) => [s.ufSigla, s.municipiosAmostra])),
+          cobertura: dados.metodologia?.fracaoAmostral ?? 0,
+          coleta: dados.coleta?.finalizadoEm ?? dados.geradoEm ?? "",
+        }}
       />
     </>
   );

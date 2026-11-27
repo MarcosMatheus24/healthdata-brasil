@@ -14,10 +14,11 @@ export const metadata: Metadata = {
 
 const ENDPOINTS = [
   { metodo: "GET", rota: "/api/fontes/status", desc: "Estado das fontes sem expor segredos" },
-  { metodo: "GET", rota: "/api/indicadores?ano=&uf=", desc: "Agregados validados por UF e período" },
-  { metodo: "GET", rota: "/api/territorios?uf=&codigo=", desc: "Códigos IBGE e validação territorial" },
+  { metodo: "GET", rota: "/api/agravos", desc: "Doenças monitoradas, definição de caso e estado da coleta" },
+  { metodo: "GET", rota: "/api/indicadores?agravo=&ano=&uf=", desc: "Agregados por doença (srag, dengue, zika, febreamarela), UF e período" },
+  { metodo: "GET", rota: "/api/territorios?uf=&codigo=&agravo=", desc: "Códigos IBGE, validação territorial e municípios por doença" },
   { metodo: "POST", rota: "/api/integracoes/validar", desc: "Ação restrita, executada no servidor" },
-  { metodo: "GET", rota: "/api/export?ano=&uf=", desc: "CSV agregado com proveniência embutida" },
+  { metodo: "GET", rota: "/api/export?agravo=&ano=&uf=", desc: "CSV por doença com proveniência e definição de caso" },
   { metodo: "GET", rota: "/api/saude", desc: "Verificação de saúde do serviço" },
 ];
 

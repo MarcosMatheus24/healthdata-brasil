@@ -1,47 +1,94 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { LinhaIndicador, MunicipioAmostra, UF } from "@/lib/types";
+import { AGRAVOS, type AgravoId } from "@/lib/agravos";
+import { AgravoPendente, AgravoSelector, type EstadoAgravoResumo } from "@/components/agravo-selector";
 import { MapaBrasil } from "@/components/mapa-brasil";
 import { Badge, ProvenanceBar } from "@/components/ui";
-import { dataHora, int, pct } from "@/lib/format";
+import { dataHora, int, pct, taxa } from "@/lib/format";
 
-export function MapaClient({
-  ufs,
-  anos,
-  anoInicial,
-  linhasIniciais,
-  municipiosPorUf,
-  cobertura,
-  coleta,
-}: {
-  ufs: UF[];
+type Estado = {
+  agravo: AgravoId;
+  disponivel: boolean;
+  estado: "coletado" | "pendente" | "erro";
+  mensagem: string | null;
   anos: number[];
-  anoInicial: number;
-  linhasIniciais: LinhaIndicador[];
+  ano: number;
+  linhas: LinhaIndicador[];
   municipiosPorUf: Record<string, MunicipioAmostra[]>;
   cobertura: number;
   coleta: string;
-}) {
-  const [ano, setAno] = useState(anoInicial);
-  const [linhas, setLinhas] = useState(linhasIniciais);
+};
+
+export function MapaClient({ ufs, inicial, estados }: { ufs: UF[]; inicial: Estado; estados: EstadoAgravoResumo[] }) {
+  const [dados, setDados] = useState<Estado>(inicial);
+  const [agravo, setAgravo] = useState<AgravoId>(inicial.agravo);
+  const [ano, setAno] = useState(inicial.ano);
   const [metrica, setMetrica] = useState<"taxa" | "absoluto">("taxa");
   const [selecionado, setSelecionado] = useState<string | null>(null);
   const [carregando, setCarregando] = useState(false);
+  const pedido = useRef(0);
+  const { linhas, anos, municipiosPorUf, cobertura, coleta } = dados;
+  const def = AGRAVOS[agravo];
 
-  useEffect(() => {
-    if (ano === anoInicial) return;
-    let ativo = true;
+  /** Busca indicadores + municípios do agravo. Sem `anoAlvo`, o servidor escolhe o ano de referência. */
+  const carregar = async (novoAgravo: AgravoId, anoAlvo?: number) => {
+    const meu = ++pedido.current;
     setCarregando(true);
-    fetch(`/api/indicadores?ano=${ano}&uf=BR`)
-      .then((r) => r.json())
-      .then((d) => ativo && setLinhas(d.linhas ?? []))
-      .catch(() => ativo && setLinhas([]))
-      .finally(() => ativo && setCarregando(false));
-    return () => {
-      ativo = false;
-    };
-  }, [ano, anoInicial]);
+    try {
+      const qs = new URLSearchParams({ agravo: novoAgravo, uf: "BR" });
+      if (anoAlvo) qs.set("ano", String(anoAlvo));
+      const [ind, terr] = await Promise.all([
+        fetch(`/api/indicadores?${qs}`).then((r) => r.json()),
+        fetch(`/api/territorios?agravo=${novoAgravo}`).then((r) => r.json()),
+      ]);
+      if (meu !== pedido.current) return; // resposta atrasada de um clique anterior
+      const municipios: Record<string, MunicipioAmostra[]> = Object.fromEntries(
+        (terr.ufs ?? []).map((u: { sigla: string; municipiosAmostrados?: MunicipioAmostra[] }) => [u.sigla, u.municipiosAmostrados ?? []]),
+      );
+      setDados({
+        agravo: novoAgravo,
+        disponivel: Boolean(ind.disponivel),
+        estado: ind.estado ?? "pendente",
+        mensagem: ind.mensagem ?? null,
+        anos: ind.anosDisponiveis ?? [],
+        ano: ind.parametros?.ano ?? anoAlvo ?? ano,
+        linhas: ind.linhas ?? [],
+        municipiosPorUf: municipios,
+        cobertura: ind.proveniencia?.fracaoAmostral ?? 0,
+        coleta: ind.proveniencia?.coleta ?? "",
+      });
+      setAno(ind.parametros?.ano ?? anoAlvo ?? ano);
+    } catch {
+      if (meu === pedido.current) setDados((d) => ({ ...d, linhas: [] }));
+    } finally {
+      if (meu === pedido.current) setCarregando(false);
+    }
+  };
+
+  const primeira = useRef(true);
+  useEffect(() => {
+    if (primeira.current) {
+      primeira.current = false;
+      return;
+    }
+    void carregar(agravo, ano);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ano]);
+
+  const trocarAgravo = (novo: AgravoId) => {
+    if (novo === agravo) return;
+    setAgravo(novo);
+    setSelecionado(null);
+    const url = new URL(window.location.href);
+    if (novo === "srag") url.searchParams.delete("agravo");
+    else url.searchParams.set("agravo", novo);
+    window.history.replaceState(null, "", url);
+    void carregar(novo);
+  };
+
+  const disponivel = dados.disponivel && dados.agravo === agravo;
 
   const municipios = useMemo(
     () => (selecionado ? municipiosPorUf[selecionado] ?? [] : []),
@@ -56,6 +103,7 @@ export function MapaClient({
   return (
     <div className="wrap py-10">
       <div className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-3 rounded-2xl border border-line bg-surface/80 px-4 py-3 shadow-[0_1px_3px_rgb(11_19_36/0.04)] backdrop-blur" data-reveal>
+        <AgravoSelector valor={agravo} onChange={trocarAgravo} estados={estados} className="w-full xl:w-auto" />
         <div className="flex items-center gap-2">
           <label htmlFor="ano-mapa" className="kicker">
             Período
@@ -63,14 +111,19 @@ export function MapaClient({
           <select
             id="ano-mapa"
             value={ano}
+            disabled={!disponivel}
             onChange={(e) => setAno(Number(e.target.value))}
             className="mono border border-line-strong px-3 py-1.5 text-[0.78rem] transition-colors hover:border-brand focus:border-brand focus:outline-none"
           >
-            {anos.map((a) => (
-              <option key={a} value={a}>
-                {a}
-              </option>
-            ))}
+            {anos.length ? (
+              anos.map((a) => (
+                <option key={a} value={a}>
+                  {a}
+                </option>
+              ))
+            ) : (
+              <option value={ano}>—</option>
+            )}
           </select>
         </div>
 
@@ -108,12 +161,17 @@ export function MapaClient({
         </div>
       </div>
 
+      {!disponivel && !carregando ? (
+        <AgravoPendente agravo={agravo} estado={dados.estado} mensagem={dados.mensagem} />
+      ) : (
+      <>
       <MapaBrasil
         ufs={ufs}
         linhas={linhas}
         metrica={metrica}
         selecionado={selecionado}
         onSelecionar={setSelecionado}
+        agravo={agravo}
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -137,13 +195,13 @@ export function MapaClient({
               </dd>
             </div>
             <div className="flex items-baseline justify-between">
-              <dt className="text-ink-soft">Cobertura amostral global</dt>
+              <dt className="text-ink-soft">Cobertura amostral · {def.nome}</dt>
               <dd className="mono">{pct(cobertura * 100, 2)}</dd>
             </div>
           </dl>
 
           <p className="mt-5 border-l-2 border-line-strong pl-4 text-[0.72rem] leading-relaxed text-ink-mute">
-            UF sem dado não é UF sem notificação: significa que a amostra sistemática não capturou
+            UF sem dado não é UF sem caso: significa que a amostra sistemática não capturou
             registros daquele território no recorte. A ausência é exibida com hachura, nunca como
             zero.
           </p>
@@ -186,8 +244,8 @@ export function MapaClient({
                     <tr key={l.ufSigla} className="border-b border-line/60 last:border-0">
                       <td className="py-2">{l.ufNome}</td>
                       <td className="mono py-2 text-[0.68rem] text-ink-mute">{l.ufCodigo}</td>
-                      <td className="mono py-2 text-right">{int(l.notificacoesEstimadas)}</td>
-                      <td className="mono py-2 text-right">{int(l.taxaPor100Mil)}</td>
+                      <td className="mono py-2 text-right">{l.suprimido ? "< 5" : int(l.notificacoesEstimadas)}</td>
+                      <td className="mono py-2 text-right">{taxa(l.taxaPor100Mil)}</td>
                     </tr>
                   ))}
               </tbody>
@@ -196,9 +254,12 @@ export function MapaClient({
         </section>
       </div>
 
+      </>
+      )}
+
       <div className="mt-10" data-reveal>
         <ProvenanceBar
-          fonte="Malha e territórios: IBGE · Indicadores: MS Dados Abertos (SRAG)"
+          fonte={`Malha e territórios: IBGE · Indicadores: MS Dados Abertos (${def.sistema})`}
           periodo={String(ano)}
           cobertura={pct(cobertura * 100, 2)}
           coleta={dataHora(coleta)}

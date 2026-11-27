@@ -103,5 +103,29 @@ console.log(`\nHealthData Brasil — testes de fumaça em ${BASE}\n`);
   ok("CSV tem linhas de UF", texto.trim().split("\n").length >= 28, String(texto.trim().split("\n").length));
 }
 
+// 7. agravos (multidoença)
+{
+  const { status, corpo } = await json("/api/agravos");
+  ok("GET /api/agravos responde 200", status === 200, `status ${status}`);
+  const ids = (corpo?.agravos ?? []).map((a) => a.id).sort().join(",");
+  ok("catálogo tem SRAG, Dengue, Zika e Febre amarela", ids === "dengue,febreamarela,srag,zika", ids);
+  ok("cada agravo declara definição de caso", (corpo?.agravos ?? []).every((a) => a.rotuloContagem && a.definicao));
+
+  const invalido = await json("/api/indicadores?agravo=sarampo");
+  ok("agravo inexistente retorna 400", invalido.status === 400 && invalido.corpo?.erro === "agravo_invalido", `status ${invalido.status}`);
+
+  for (const a of corpo?.agravos ?? []) {
+    const r = await json(`/api/indicadores?agravo=${a.id}`);
+    ok(`/api/indicadores?agravo=${a.id} responde 200`, r.status === 200, `status ${r.status}`);
+    if (a.estado === "coletado") {
+      ok(`${a.id}: traz linhas e proveniência`, r.corpo?.disponivel === true && r.corpo?.linhas?.length > 0 && Boolean(r.corpo?.proveniencia?.definicao));
+    } else {
+      ok(`${a.id}: sem coleta não vira zero`, r.corpo?.disponivel === false && r.corpo?.linhas?.length === 0 && r.corpo?.estado !== "coletado");
+      const csv = await fetch(`${BASE}/api/export?agravo=${a.id}`);
+      ok(`${a.id}: CSV recusado sem coleta (409)`, csv.status === 409, `status ${csv.status}`);
+    }
+  }
+}
+
 console.log(`\n${passou} verificações ok, ${falhou} falha(s)\n`);
 process.exit(falhou === 0 ? 0 : 1);

@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS populacao (
 
 CREATE TABLE IF NOT EXISTS coleta (
   id             SERIAL PRIMARY KEY,
+  agravo         TEXT NOT NULL DEFAULT 'SRAG', -- SRAG | COVID19 | DENGUE | MPOX
   fonte          TEXT NOT NULL,
   recurso        TEXT NOT NULL,
   parametros     JSONB NOT NULL DEFAULT '{}'::jsonb,
@@ -67,6 +68,7 @@ CREATE INDEX IF NOT EXISTS idx_perfil_busca ON perfil (agravo, uf_codigo, dimens
 
 CREATE TABLE IF NOT EXISTS municipio_amostra (
   id               BIGSERIAL PRIMARY KEY,
+  agravo           TEXT NOT NULL DEFAULT 'SRAG',
   uf_codigo        TEXT REFERENCES uf (codigo_ibge) ON DELETE CASCADE,
   municipio_codigo TEXT NOT NULL,
   municipio_nome   TEXT,
@@ -74,6 +76,11 @@ CREATE TABLE IF NOT EXISTS municipio_amostra (
   estimado         INTEGER,
   coleta_id        INTEGER REFERENCES coleta (id) ON DELETE SET NULL
 );
+
+-- Migração para bancos criados antes da v2 (multiagravo)
+ALTER TABLE coleta ADD COLUMN IF NOT EXISTS agravo TEXT NOT NULL DEFAULT 'SRAG';
+ALTER TABLE municipio_amostra ADD COLUMN IF NOT EXISTS agravo TEXT NOT NULL DEFAULT 'SRAG';
+CREATE INDEX IF NOT EXISTS idx_coleta_agravo ON coleta (agravo, id DESC);
 
 CREATE TABLE IF NOT EXISTS auditoria (
   id        BIGSERIAL PRIMARY KEY,
@@ -109,5 +116,5 @@ LEFT JOIN populacao p ON p.uf_codigo = i.uf_codigo AND p.ano = i.ano
 WHERE i.mes IS NULL
 GROUP BY i.agravo, i.uf_codigo, u.sigla, u.nome, u.regiao, i.ano, i.metrica, p.populacao;
 
-COMMENT ON TABLE indicador IS 'Agregados normalizados por UF/ano/mês. valor_estimado = valor_amostra / fração amostral da coleta.';
+COMMENT ON TABLE indicador IS 'Agregados normalizados por agravo (SRAG, COVID19, DENGUE, MPOX) e UF/ano/mês. valor_estimado = valor_amostra / fração amostral da coleta.';
 COMMENT ON TABLE coleta IS 'Trilha de auditoria de cada extração: parâmetros, HTTP, páginas, fração amostral.';

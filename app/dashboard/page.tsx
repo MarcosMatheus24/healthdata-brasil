@@ -1,53 +1,27 @@
 import type { Metadata } from "next";
-import {
-  anosDisponiveis,
-  anoReferencia,
-  getBase,
-  linhasIndicadores,
-  perfilAgregado,
-  resumoNacional,
-  serieMensal,
-} from "@/lib/data";
+import { getBase, montarIndicadores, statusAgravos } from "@/lib/data";
+import { AGRAVO_PADRAO, lerAgravo } from "@/lib/agravos";
 import { DashboardClient } from "@/components/dashboard-client";
 import { SectionLabel } from "@/components/ui";
 import { AnimatedNumber } from "@/components/animated-number";
 
-export const revalidate = 60;
-
 export const metadata: Metadata = {
   title: "Dashboard de indicadores",
   description:
-    "Indicadores de SRAG por unidade da federação: notificações, taxa por 100 mil habitantes, letalidade e cobertura amostral, com proveniência em cada cartão.",
+    "Indicadores de SRAG, Dengue, Zika e Febre amarela por unidade da federação: casos, taxa por 100 mil habitantes, letalidade e cobertura, com a definição de caso e a proveniência em cada cartão.",
 };
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ agravo?: string }>;
+}) {
+  const { agravo: agravoParam } = await searchParams;
+  const agravo = lerAgravo(agravoParam) ?? AGRAVO_PADRAO;
   const base = await getBase();
-  const anos = anosDisponiveis(base);
-  const ano = anoReferencia(base);
-
-  const inicial = {
-    parametros: { ano, uf: "BR", agravo: "SRAG" },
-    resumo: resumoNacional(base, ano),
-    ufSelecionada: null,
-    linhas: linhasIndicadores(base, { ano }),
-    serieMensal: serieMensal(base, "BR"),
-    perfil: {
-      classificacao: perfilAgregado(base, "classificacao"),
-      evolucao: perfilAgregado(base, "evolucao"),
-      uti: perfilAgregado(base, "uti"),
-      faixaEtaria: perfilAgregado(base, "faixaEtaria"),
-    },
-    proveniencia: {
-      fonte: "API de Dados Abertos do Ministério da Saúde (SRAG 2019-2026)",
-      fonteTerritorial: "IBGE — localidades e população residente estimada",
-      coleta: base.meta.coletas?.[0]?.finalizadoEm ?? base.meta.geradoEm,
-      registrosColetados: base.meta.metodologia.registrosColetados,
-      universoFonte: base.meta.metodologia.universoFonte,
-      fracaoAmostral: base.meta.metodologia.fracaoAmostral,
-      metodo: base.meta.metodologia.tipo,
-      origemDados: base.origem,
-    },
-  };
+  const estados = statusAgravos(base);
+  const inicial = montarIndicadores(base, agravo);
+  const coletados = estados.filter((e) => e.estado === "coletado").length;
 
   return (
     <>
@@ -60,22 +34,23 @@ export default async function DashboardPage() {
                 Dashboard de indicadores
               </h1>
               <p data-reveal style={{ ["--d" as string]: 100 }} className="mt-5 max-w-2xl text-[1rem] leading-relaxed text-ink-soft">
-                O seletor altera o recorte e a fonte territorial, não a metodologia. Todo número
-                aqui é uma <strong className="font-medium text-ink">estimativa por amostragem</strong>{" "}
-                do conjunto oficial de SRAG, com a fração amostral declarada ao lado.
+                Escolha a doença, o período e o território. Cada doença declara{" "}
+                <strong className="font-medium text-ink">o que está sendo contado</strong> — notificação,
+                caso provável ou caso confirmado — e a fração amostral aparece ao lado de cada número.
               </p>
             </div>
             <dl className="card grid grid-cols-2 divide-x divide-line" data-reveal="scale">
               <div className="px-5 py-4">
-                <dt className="kicker">Universo</dt>
+                <dt className="kicker">Doenças monitoradas</dt>
                 <dd className="mono mt-1.5 text-[1.1rem] font-medium">
-                  <AnimatedNumber value={base.meta.metodologia.universoFonte.toLocaleString("pt-BR")} />
+                  <AnimatedNumber value={String(estados.length)} />
                 </dd>
               </div>
               <div className="px-5 py-4">
-                <dt className="kicker">Amostra</dt>
+                <dt className="kicker">Com coleta publicada</dt>
                 <dd className="mono mt-1.5 text-[1.1rem] font-medium">
-                  <AnimatedNumber value={base.meta.metodologia.registrosColetados.toLocaleString("pt-BR")} />
+                  <AnimatedNumber value={String(coletados)} />
+                  <span className="text-ink-mute"> / {estados.length}</span>
                 </dd>
               </div>
             </dl>
@@ -83,7 +58,11 @@ export default async function DashboardPage() {
         </div>
       </header>
 
-      <DashboardClient anos={anos} ufs={base.ufs} inicial={inicial} />
+      <DashboardClient
+        ufs={base.ufs}
+        inicial={inicial}
+        estados={estados.map((e) => ({ id: e.id, estado: e.estado }))}
+      />
     </>
   );
 }

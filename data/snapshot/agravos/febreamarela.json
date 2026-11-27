@@ -1,0 +1,2903 @@
+{
+  "agravo": "febreamarela",
+  "estado": "coletado",
+  "mensagem": null,
+  "geradoEm": "2026-11-27T03:26:20.969Z",
+  "metodologia": {
+    "tipo": "coleta censitária (todas as páginas)",
+    "limitePorPagina": 1000,
+    "paginasSolicitadas": 3,
+    "paginasTotais": 3,
+    "passo": 1,
+    "registrosColetados": 2913,
+    "universoFonte": 2913,
+    "fracaoAmostral": 1,
+    "estimativa": "contagem direta (sem estimativa)",
+    "estratos": [
+      {
+        "rotulo": "rota inteira",
+        "universo": 2913,
+        "coletados": 2913,
+        "paginas": 3,
+        "totalPaginas": 3,
+        "erros": 0,
+        "peso": 1,
+        "censo": true,
+        "modoOffset": "registro",
+        "duplicados": 32
+      }
+    ],
+    "periodoObservado": {
+      "min": "1994-11-29",
+      "max": "2026-05-30"
+    },
+    "referenciaTemporal": "dt_is (início dos sintomas); ano_is/mes_is como fallback",
+    "universoMedidoPor": "busca binária (a rota não informa total_registros)"
+  },
+  "coleta": {
+    "agravo": "febreamarela",
+    "fonte": "MS_DADOS_ABERTOS",
+    "recurso": "/arboviroses/febre-amarela-humanos-primatas-nao-humanos",
+    "parametros": {
+      "limit": 1000,
+      "estratos": [
+        "rota inteira"
+      ]
+    },
+    "iniciadoEm": "2026-11-27T03:22:03.568Z",
+    "finalizadoEm": "2026-11-27T03:26:20.969Z",
+    "httpStatus": 200,
+    "paginas": [],
+    "registros": 2913,
+    "totalFonte": 2913,
+    "fracaoAmostral": 1,
+    "status": "sucesso",
+    "origemColeta": "navegador"
+  },
+  "registrosLidos": 2913,
+  "camposFonte": [],
+  "qualidade": {
+    "lidos": 2913,
+    "contados": 2912,
+    "semUf": 1,
+    "semData": 0,
+    "foraDoPeriodo": 0,
+    "min": "1994-11-29",
+    "max": "2026-05-30"
+  },
+  "perfilGlobal": {
+    "classificacao": {
+      "Caso confirmado": 2912
+    },
+    "evolucao": {
+      "Óbito": 1070,
+      "Não óbito": 1842
+    },
+    "uti": {},
+    "hospitalizacao": {},
+    "vacinaGripe": {},
+    "sexo": {
+      "Masculino": 2421,
+      "Feminino": 490,
+      "Ignorado": 1
+    },
+    "faixaEtaria": {
+      "30-59 anos": 1714,
+      "18-29 anos": 491,
+      "12-17 anos": 141,
+      "60+ anos": 493,
+      "5-11 anos": 46,
+      "Não informado": 10,
+      "1-4 anos": 17
+    }
+  },
+  "ufs": [
+    {
+      "ufSigla": "MG",
+      "ufCodigo": "31",
+      "ufNome": "Minas Gerais",
+      "regiao": "Sudeste",
+      "amostra": 1112,
+      "estimado": 1112,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 381,
+      "obitosEstimado": 381,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2000": 2,
+        "2001": 32,
+        "2002": 8,
+        "2003": 57,
+        "2008": 1,
+        "2009": 1,
+        "2016": 43,
+        "2017": 434,
+        "2018": 520,
+        "2024": 2,
+        "2025": 12
+      },
+      "porAnoEstimado": {
+        "2000": 2,
+        "2001": 32,
+        "2002": 8,
+        "2003": 57,
+        "2008": 1,
+        "2009": 1,
+        "2016": 43,
+        "2017": 434,
+        "2018": 520,
+        "2024": 2,
+        "2025": 12
+      },
+      "porMes": {
+        "2000-03": 1,
+        "2000-04": 1,
+        "2001-01": 6,
+        "2001-02": 18,
+        "2001-03": 8,
+        "2002-01": 1,
+        "2002-12": 7,
+        "2003-01": 45,
+        "2003-02": 11,
+        "2003-03": 1,
+        "2008-02": 1,
+        "2009-08": 1,
+        "2016-12": 43,
+        "2017-01": 369,
+        "2017-02": 35,
+        "2017-03": 10,
+        "2017-04": 5,
+        "2017-05": 1,
+        "2017-06": 2,
+        "2017-12": 12,
+        "2018-01": 303,
+        "2018-02": 186,
+        "2018-03": 25,
+        "2018-04": 6,
+        "2024-03": 1,
+        "2024-12": 1,
+        "2025-01": 1,
+        "2025-02": 5,
+        "2025-03": 4,
+        "2025-04": 1,
+        "2025-05": 1
+      },
+      "porMesEstimado": {
+        "2000-03": 1,
+        "2000-04": 1,
+        "2001-01": 6,
+        "2001-02": 18,
+        "2001-03": 8,
+        "2002-01": 1,
+        "2002-12": 7,
+        "2003-01": 45,
+        "2003-02": 11,
+        "2003-03": 1,
+        "2008-02": 1,
+        "2009-08": 1,
+        "2016-12": 43,
+        "2017-01": 369,
+        "2017-02": 35,
+        "2017-03": 10,
+        "2017-04": 5,
+        "2017-05": 1,
+        "2017-06": 2,
+        "2017-12": 12,
+        "2018-01": 303,
+        "2018-02": 186,
+        "2018-03": 25,
+        "2018-04": 6,
+        "2024-03": 1,
+        "2024-12": 1,
+        "2025-01": 1,
+        "2025-02": 5,
+        "2025-03": 4,
+        "2025-04": 1,
+        "2025-05": 1
+      },
+      "obitosPorAno": {
+        "2000": 2,
+        "2001": 16,
+        "2002": 4,
+        "2003": 20,
+        "2016": 30,
+        "2017": 132,
+        "2018": 171,
+        "2024": 1,
+        "2025": 5
+      },
+      "obitosPorAnoEstimado": {
+        "2000": 2,
+        "2001": 16,
+        "2002": 4,
+        "2003": 20,
+        "2016": 30,
+        "2017": 132,
+        "2018": 171,
+        "2024": 1,
+        "2025": 5
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 1112
+        },
+        "evolucao": {
+          "Óbito": 381,
+          "Não óbito": 731
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 945,
+          "Feminino": 166,
+          "Ignorado": 1
+        },
+        "faixaEtaria": {
+          "30-59 anos": 741,
+          "18-29 anos": 115,
+          "12-17 anos": 33,
+          "60+ anos": 210,
+          "5-11 anos": 5,
+          "Não informado": 5,
+          "1-4 anos": 3
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "3137007",
+          "nome": "Ladainha",
+          "amostra": 52,
+          "estimado": 52
+        },
+        {
+          "codigo": "3136702",
+          "nome": "Juiz de Fora",
+          "amostra": 41,
+          "estimado": 41
+        },
+        {
+          "codigo": "3140001",
+          "nome": "Mariana",
+          "amostra": 41,
+          "estimado": 41
+        },
+        {
+          "codigo": "3144805",
+          "nome": "Nova Lima",
+          "amostra": 36,
+          "estimado": 36
+        },
+        {
+          "codigo": "3145307",
+          "nome": "Novo Cruzeiro",
+          "amostra": 35,
+          "estimado": 35
+        },
+        {
+          "codigo": "3113404",
+          "nome": "Caratinga",
+          "amostra": 34,
+          "estimado": 34
+        },
+        {
+          "codigo": "3152402",
+          "nome": "Poté",
+          "amostra": 26,
+          "estimado": 26
+        },
+        {
+          "codigo": "3167103",
+          "nome": "Serro",
+          "amostra": 25,
+          "estimado": 25
+        },
+        {
+          "codigo": "3105400",
+          "nome": "Barão de Cocais",
+          "amostra": 24,
+          "estimado": 24
+        },
+        {
+          "codigo": "3156809",
+          "nome": "Sabinópolis",
+          "amostra": 23,
+          "estimado": 23
+        }
+      ]
+    },
+    {
+      "ufSigla": "SP",
+      "ufCodigo": "35",
+      "ufNome": "São Paulo",
+      "regiao": "Sudeste",
+      "amostra": 766,
+      "estimado": 766,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 289,
+      "obitosEstimado": 289,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2000": 2,
+        "2008": 2,
+        "2009": 28,
+        "2016": 3,
+        "2017": 76,
+        "2018": 505,
+        "2019": 71,
+        "2022": 1,
+        "2023": 3,
+        "2024": 3,
+        "2025": 61,
+        "2026": 11
+      },
+      "porAnoEstimado": {
+        "2000": 2,
+        "2008": 2,
+        "2009": 28,
+        "2016": 3,
+        "2017": 76,
+        "2018": 505,
+        "2019": 71,
+        "2022": 1,
+        "2023": 3,
+        "2024": 3,
+        "2025": 61,
+        "2026": 11
+      },
+      "porMes": {
+        "2000-03": 1,
+        "2000-04": 1,
+        "2008-04": 1,
+        "2008-05": 1,
+        "2009-02": 4,
+        "2009-03": 23,
+        "2009-04": 1,
+        "2016-03": 1,
+        "2016-12": 2,
+        "2017-01": 3,
+        "2017-03": 11,
+        "2017-04": 5,
+        "2017-05": 1,
+        "2017-09": 1,
+        "2017-10": 1,
+        "2017-11": 2,
+        "2017-12": 52,
+        "2018-01": 248,
+        "2018-02": 108,
+        "2018-03": 110,
+        "2018-04": 27,
+        "2018-05": 6,
+        "2018-10": 1,
+        "2018-12": 5,
+        "2019-01": 42,
+        "2019-02": 19,
+        "2019-03": 8,
+        "2019-04": 1,
+        "2019-05": 1,
+        "2022-12": 1,
+        "2023-02": 2,
+        "2023-04": 1,
+        "2024-04": 1,
+        "2024-12": 2,
+        "2025-01": 12,
+        "2025-02": 23,
+        "2025-03": 21,
+        "2025-04": 4,
+        "2025-05": 1,
+        "2026-03": 5,
+        "2026-04": 5,
+        "2026-05": 1
+      },
+      "porMesEstimado": {
+        "2000-03": 1,
+        "2000-04": 1,
+        "2008-04": 1,
+        "2008-05": 1,
+        "2009-02": 4,
+        "2009-03": 23,
+        "2009-04": 1,
+        "2016-03": 1,
+        "2016-12": 2,
+        "2017-01": 3,
+        "2017-03": 11,
+        "2017-04": 5,
+        "2017-05": 1,
+        "2017-09": 1,
+        "2017-10": 1,
+        "2017-11": 2,
+        "2017-12": 52,
+        "2018-01": 248,
+        "2018-02": 108,
+        "2018-03": 110,
+        "2018-04": 27,
+        "2018-05": 6,
+        "2018-10": 1,
+        "2018-12": 5,
+        "2019-01": 42,
+        "2019-02": 19,
+        "2019-03": 8,
+        "2019-04": 1,
+        "2019-05": 1,
+        "2022-12": 1,
+        "2023-02": 2,
+        "2023-04": 1,
+        "2024-04": 1,
+        "2024-12": 2,
+        "2025-01": 12,
+        "2025-02": 23,
+        "2025-03": 21,
+        "2025-04": 4,
+        "2025-05": 1,
+        "2026-03": 5,
+        "2026-04": 5,
+        "2026-05": 1
+      },
+      "obitosPorAno": {
+        "2000": 2,
+        "2008": 2,
+        "2009": 11,
+        "2016": 3,
+        "2017": 36,
+        "2018": 179,
+        "2019": 12,
+        "2023": 2,
+        "2024": 1,
+        "2025": 35,
+        "2026": 6
+      },
+      "obitosPorAnoEstimado": {
+        "2000": 2,
+        "2008": 2,
+        "2009": 11,
+        "2016": 3,
+        "2017": 36,
+        "2018": 179,
+        "2019": 12,
+        "2023": 2,
+        "2024": 1,
+        "2025": 35,
+        "2026": 6
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 766
+        },
+        "evolucao": {
+          "Óbito": 289,
+          "Não óbito": 477
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 634,
+          "Feminino": 132
+        },
+        "faixaEtaria": {
+          "30-59 anos": 468,
+          "18-29 anos": 128,
+          "12-17 anos": 20,
+          "Não informado": 2,
+          "60+ anos": 135,
+          "1-4 anos": 4,
+          "5-11 anos": 9
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "3528502",
+          "nome": "Mairiporã",
+          "amostra": 168,
+          "estimado": 168
+        },
+        {
+          "codigo": "3504107",
+          "nome": "Atibaia",
+          "amostra": 50,
+          "estimado": 50
+        },
+        {
+          "codigo": "3532405",
+          "nome": "Nazaré Paulista",
+          "amostra": 36,
+          "estimado": 36
+        },
+        {
+          "codigo": "3550308",
+          "nome": "São Paulo",
+          "amostra": 33,
+          "estimado": 33
+        },
+        {
+          "codigo": "3518800",
+          "nome": "Guarulhos",
+          "amostra": 28,
+          "estimado": 28
+        },
+        {
+          "codigo": "3521200",
+          "nome": "Iporanga",
+          "amostra": 19,
+          "estimado": 19
+        },
+        {
+          "codigo": "3514809",
+          "nome": "Eldorado",
+          "amostra": 16,
+          "estimado": 16
+        },
+        {
+          "codigo": "3519709",
+          "nome": "Ibiúna",
+          "amostra": 14,
+          "estimado": 14
+        },
+        {
+          "codigo": "3538808",
+          "nome": "Piraju",
+          "amostra": 14,
+          "estimado": 14
+        },
+        {
+          "codigo": "3538600",
+          "nome": "Piracaia",
+          "amostra": 13,
+          "estimado": 13
+        }
+      ]
+    },
+    {
+      "ufSigla": "RJ",
+      "ufCodigo": "33",
+      "ufNome": "Rio de Janeiro",
+      "regiao": "Sudeste",
+      "amostra": 307,
+      "estimado": 307,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 105,
+      "obitosEstimado": 105,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2017": 28,
+        "2018": 279
+      },
+      "porAnoEstimado": {
+        "2017": 28,
+        "2018": 279
+      },
+      "porMes": {
+        "2017-02": 1,
+        "2017-03": 11,
+        "2017-04": 7,
+        "2017-05": 5,
+        "2017-06": 1,
+        "2017-07": 1,
+        "2017-12": 2,
+        "2018-01": 100,
+        "2018-02": 116,
+        "2018-03": 32,
+        "2018-04": 28,
+        "2018-05": 2,
+        "2018-06": 1
+      },
+      "porMesEstimado": {
+        "2017-02": 1,
+        "2017-03": 11,
+        "2017-04": 7,
+        "2017-05": 5,
+        "2017-06": 1,
+        "2017-07": 1,
+        "2017-12": 2,
+        "2018-01": 100,
+        "2018-02": 116,
+        "2018-03": 32,
+        "2018-04": 28,
+        "2018-05": 2,
+        "2018-06": 1
+      },
+      "obitosPorAno": {
+        "2017": 9,
+        "2018": 96
+      },
+      "obitosPorAnoEstimado": {
+        "2017": 9,
+        "2018": 96
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 307
+        },
+        "evolucao": {
+          "Não óbito": 202,
+          "Óbito": 105
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 243,
+          "Feminino": 64
+        },
+        "faixaEtaria": {
+          "30-59 anos": 164,
+          "12-17 anos": 16,
+          "60+ anos": 76,
+          "18-29 anos": 49,
+          "5-11 anos": 1,
+          "Não informado": 1
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "3300100",
+          "nome": "Angra dos Reis",
+          "amostra": 66,
+          "estimado": 66
+        },
+        {
+          "codigo": "3306107",
+          "nome": "Valença",
+          "amostra": 35,
+          "estimado": 35
+        },
+        {
+          "codigo": "3305802",
+          "nome": "Teresópolis",
+          "amostra": 22,
+          "estimado": 22
+        },
+        {
+          "codigo": "3303401",
+          "nome": "Nova Friburgo",
+          "amostra": 20,
+          "estimado": 20
+        },
+        {
+          "codigo": "3301603",
+          "nome": "Duas Barras",
+          "amostra": 14,
+          "estimado": 14
+        },
+        {
+          "codigo": "3305703",
+          "nome": "Sumidouro",
+          "amostra": 13,
+          "estimado": 13
+        },
+        {
+          "codigo": "3300308",
+          "nome": "Barra do Piraí",
+          "amostra": 11,
+          "estimado": 11
+        },
+        {
+          "codigo": "3303807",
+          "nome": "Paraty",
+          "amostra": 10,
+          "estimado": 10
+        },
+        {
+          "codigo": "3301306",
+          "nome": "Casimiro de Abreu",
+          "amostra": 8,
+          "estimado": 8
+        },
+        {
+          "codigo": "3301108",
+          "nome": "Cantagalo",
+          "amostra": 7,
+          "estimado": 7
+        }
+      ]
+    },
+    {
+      "ufSigla": "ES",
+      "ufCodigo": "32",
+      "ufNome": "Espírito Santo",
+      "regiao": "Sudeste",
+      "amostra": 258,
+      "estimado": 258,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 84,
+      "obitosEstimado": 84,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2017": 255,
+        "2018": 3
+      },
+      "porAnoEstimado": {
+        "2017": 255,
+        "2018": 3
+      },
+      "porMes": {
+        "2017-01": 75,
+        "2017-02": 50,
+        "2017-03": 68,
+        "2017-04": 56,
+        "2017-05": 2,
+        "2017-06": 1,
+        "2017-07": 1,
+        "2017-08": 1,
+        "2017-12": 1,
+        "2018-01": 3
+      },
+      "porMesEstimado": {
+        "2017-01": 75,
+        "2017-02": 50,
+        "2017-03": 68,
+        "2017-04": 56,
+        "2017-05": 2,
+        "2017-06": 1,
+        "2017-07": 1,
+        "2017-08": 1,
+        "2017-12": 1,
+        "2018-01": 3
+      },
+      "obitosPorAno": {
+        "2017": 84
+      },
+      "obitosPorAnoEstimado": {
+        "2017": 84
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 258
+        },
+        "evolucao": {
+          "Não óbito": 174,
+          "Óbito": 84
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 204,
+          "Feminino": 54
+        },
+        "faixaEtaria": {
+          "30-59 anos": 153,
+          "60+ anos": 51,
+          "18-29 anos": 39,
+          "12-17 anos": 8,
+          "5-11 anos": 6,
+          "1-4 anos": 1
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "3204500",
+          "nome": "Santa Leopoldina",
+          "amostra": 37,
+          "estimado": 37
+        },
+        {
+          "codigo": "3201902",
+          "nome": "Domingos Martins",
+          "amostra": 24,
+          "estimado": 24
+        },
+        {
+          "codigo": "3201506",
+          "nome": "Colatina",
+          "amostra": 20,
+          "estimado": 20
+        },
+        {
+          "codigo": "3202454",
+          "nome": "Ibatiba",
+          "amostra": 16,
+          "estimado": 16
+        },
+        {
+          "codigo": "3203346",
+          "nome": "Marechal Floriano",
+          "amostra": 15,
+          "estimado": 15
+        },
+        {
+          "codigo": "3204559",
+          "nome": "Santa Maria de Jetibá",
+          "amostra": 13,
+          "estimado": 13
+        },
+        {
+          "codigo": "3205002",
+          "nome": "Serra",
+          "amostra": 12,
+          "estimado": 12
+        },
+        {
+          "codigo": "3200102",
+          "nome": "Afonso Cláudio",
+          "amostra": 10,
+          "estimado": 10
+        },
+        {
+          "codigo": "3200300",
+          "nome": "Alfredo Chaves",
+          "amostra": 10,
+          "estimado": 10
+        },
+        {
+          "codigo": "3204609",
+          "nome": "Santa Teresa",
+          "amostra": 10,
+          "estimado": 10
+        }
+      ]
+    },
+    {
+      "ufSigla": "PA",
+      "ufCodigo": "15",
+      "ufNome": "Pará",
+      "regiao": "Norte",
+      "amostra": 147,
+      "estimado": 147,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 46,
+      "obitosEstimado": 46,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1995": 1,
+        "1997": 2,
+        "1998": 23,
+        "1999": 36,
+        "2000": 1,
+        "2001": 2,
+        "2002": 1,
+        "2003": 1,
+        "2004": 2,
+        "2007": 1,
+        "2008": 3,
+        "2010": 1,
+        "2011": 2,
+        "2013": 1,
+        "2014": 1,
+        "2015": 2,
+        "2017": 8,
+        "2019": 4,
+        "2021": 3,
+        "2022": 1,
+        "2024": 2,
+        "2025": 46,
+        "2026": 3
+      },
+      "porAnoEstimado": {
+        "1995": 1,
+        "1997": 2,
+        "1998": 23,
+        "1999": 36,
+        "2000": 1,
+        "2001": 2,
+        "2002": 1,
+        "2003": 1,
+        "2004": 2,
+        "2007": 1,
+        "2008": 3,
+        "2010": 1,
+        "2011": 2,
+        "2013": 1,
+        "2014": 1,
+        "2015": 2,
+        "2017": 8,
+        "2019": 4,
+        "2021": 3,
+        "2022": 1,
+        "2024": 2,
+        "2025": 46,
+        "2026": 3
+      },
+      "porMes": {
+        "1995-04": 1,
+        "1997-06": 1,
+        "1997-07": 1,
+        "1998-02": 3,
+        "1998-03": 3,
+        "1998-04": 11,
+        "1998-05": 4,
+        "1998-06": 2,
+        "1999-01": 5,
+        "1999-02": 8,
+        "1999-03": 14,
+        "1999-04": 3,
+        "1999-05": 3,
+        "1999-06": 1,
+        "1999-09": 2,
+        "2000-06": 1,
+        "2001-03": 1,
+        "2001-06": 1,
+        "2002-05": 1,
+        "2003-09": 1,
+        "2004-03": 1,
+        "2004-04": 1,
+        "2007-09": 1,
+        "2008-02": 1,
+        "2008-06": 2,
+        "2010-06": 1,
+        "2011-01": 1,
+        "2011-05": 1,
+        "2013-08": 1,
+        "2014-05": 1,
+        "2015-02": 1,
+        "2015-07": 1,
+        "2017-03": 5,
+        "2017-04": 3,
+        "2019-02": 1,
+        "2019-03": 1,
+        "2019-05": 1,
+        "2019-07": 1,
+        "2021-05": 1,
+        "2021-07": 1,
+        "2021-12": 1,
+        "2022-03": 1,
+        "2024-03": 1,
+        "2024-05": 1,
+        "2025-02": 25,
+        "2025-03": 19,
+        "2025-04": 1,
+        "2025-06": 1,
+        "2026-03": 1,
+        "2026-04": 1,
+        "2026-05": 1
+      },
+      "porMesEstimado": {
+        "1995-04": 1,
+        "1997-06": 1,
+        "1997-07": 1,
+        "1998-02": 3,
+        "1998-03": 3,
+        "1998-04": 11,
+        "1998-05": 4,
+        "1998-06": 2,
+        "1999-01": 5,
+        "1999-02": 8,
+        "1999-03": 14,
+        "1999-04": 3,
+        "1999-05": 3,
+        "1999-06": 1,
+        "1999-09": 2,
+        "2000-06": 1,
+        "2001-03": 1,
+        "2001-06": 1,
+        "2002-05": 1,
+        "2003-09": 1,
+        "2004-03": 1,
+        "2004-04": 1,
+        "2007-09": 1,
+        "2008-02": 1,
+        "2008-06": 2,
+        "2010-06": 1,
+        "2011-01": 1,
+        "2011-05": 1,
+        "2013-08": 1,
+        "2014-05": 1,
+        "2015-02": 1,
+        "2015-07": 1,
+        "2017-03": 5,
+        "2017-04": 3,
+        "2019-02": 1,
+        "2019-03": 1,
+        "2019-05": 1,
+        "2019-07": 1,
+        "2021-05": 1,
+        "2021-07": 1,
+        "2021-12": 1,
+        "2022-03": 1,
+        "2024-03": 1,
+        "2024-05": 1,
+        "2025-02": 25,
+        "2025-03": 19,
+        "2025-04": 1,
+        "2025-06": 1,
+        "2026-03": 1,
+        "2026-04": 1,
+        "2026-05": 1
+      },
+      "obitosPorAno": {
+        "1995": 1,
+        "1997": 2,
+        "1998": 8,
+        "1999": 9,
+        "2000": 1,
+        "2001": 1,
+        "2002": 1,
+        "2004": 1,
+        "2008": 2,
+        "2010": 1,
+        "2011": 1,
+        "2017": 4,
+        "2019": 3,
+        "2021": 2,
+        "2022": 1,
+        "2025": 7,
+        "2026": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1995": 1,
+        "1997": 2,
+        "1998": 8,
+        "1999": 9,
+        "2000": 1,
+        "2001": 1,
+        "2002": 1,
+        "2004": 1,
+        "2008": 2,
+        "2010": 1,
+        "2011": 1,
+        "2017": 4,
+        "2019": 3,
+        "2021": 2,
+        "2022": 1,
+        "2025": 7,
+        "2026": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 147
+        },
+        "evolucao": {
+          "Óbito": 46,
+          "Não óbito": 101
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 126,
+          "Feminino": 21
+        },
+        "faixaEtaria": {
+          "18-29 anos": 62,
+          "30-59 anos": 32,
+          "12-17 anos": 31,
+          "5-11 anos": 13,
+          "1-4 anos": 6,
+          "60+ anos": 3
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "1501808",
+          "nome": "Breves",
+          "amostra": 63,
+          "estimado": 63
+        },
+        {
+          "codigo": "1500305",
+          "nome": "Afuá",
+          "amostra": 44,
+          "estimado": 44
+        },
+        {
+          "codigo": "1500404",
+          "nome": "Alenquer",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "1504802",
+          "nome": "Monte Alegre",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "1502707",
+          "nome": "Conceição do Araguaia",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1503101",
+          "nome": "Gurupá",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1505536",
+          "nome": "Parauapebas",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1500503",
+          "nome": "Almeirim",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1503903",
+          "nome": "Juruti",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1506138",
+          "nome": "Redenção",
+          "amostra": 2,
+          "estimado": 2
+        }
+      ]
+    },
+    {
+      "ufSigla": "GO",
+      "ufCodigo": "52",
+      "ufNome": "Goiás",
+      "regiao": "Centro-Oeste",
+      "amostra": 98,
+      "estimado": 98,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 52,
+      "obitosEstimado": 52,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1999": 10,
+        "2000": 54,
+        "2007": 7,
+        "2008": 17,
+        "2015": 6,
+        "2016": 3,
+        "2017": 1
+      },
+      "porAnoEstimado": {
+        "1999": 10,
+        "2000": 54,
+        "2007": 7,
+        "2008": 17,
+        "2015": 6,
+        "2016": 3,
+        "2017": 1
+      },
+      "porMes": {
+        "1999-12": 10,
+        "2000-01": 20,
+        "2000-02": 20,
+        "2000-03": 9,
+        "2000-04": 2,
+        "2000-05": 2,
+        "2000-06": 1,
+        "2007-04": 2,
+        "2007-12": 5,
+        "2008-01": 16,
+        "2008-02": 1,
+        "2015-01": 3,
+        "2015-05": 2,
+        "2015-12": 1,
+        "2016-01": 1,
+        "2016-03": 1,
+        "2016-04": 1,
+        "2017-03": 1
+      },
+      "porMesEstimado": {
+        "1999-12": 10,
+        "2000-01": 20,
+        "2000-02": 20,
+        "2000-03": 9,
+        "2000-04": 2,
+        "2000-05": 2,
+        "2000-06": 1,
+        "2007-04": 2,
+        "2007-12": 5,
+        "2008-01": 16,
+        "2008-02": 1,
+        "2015-01": 3,
+        "2015-05": 2,
+        "2015-12": 1,
+        "2016-01": 1,
+        "2016-03": 1,
+        "2016-04": 1,
+        "2017-03": 1
+      },
+      "obitosPorAno": {
+        "1999": 4,
+        "2000": 24,
+        "2007": 6,
+        "2008": 10,
+        "2015": 4,
+        "2016": 3,
+        "2017": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1999": 4,
+        "2000": 24,
+        "2007": 6,
+        "2008": 10,
+        "2015": 4,
+        "2016": 3,
+        "2017": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 98
+        },
+        "evolucao": {
+          "Não óbito": 46,
+          "Óbito": 52
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Feminino": 21,
+          "Masculino": 77
+        },
+        "faixaEtaria": {
+          "5-11 anos": 4,
+          "18-29 anos": 27,
+          "1-4 anos": 1,
+          "30-59 anos": 56,
+          "12-17 anos": 4,
+          "60+ anos": 6
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "5200605",
+          "nome": "Alto Paraíso de Goiás",
+          "amostra": 12,
+          "estimado": 12
+        },
+        {
+          "codigo": "5217609",
+          "nome": "Planaltina",
+          "amostra": 8,
+          "estimado": 8
+        },
+        {
+          "codigo": "5214606",
+          "nome": "Niquelândia",
+          "amostra": 6,
+          "estimado": 6
+        },
+        {
+          "codigo": "5213087",
+          "nome": "Minaçu",
+          "amostra": 5,
+          "estimado": 5
+        },
+        {
+          "codigo": "5215603",
+          "nome": "Padre Bernardo",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "5204508",
+          "nome": "Caldas Novas",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "5212501",
+          "nome": "Luziânia",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "5217302",
+          "nome": "Pirenópolis",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "5220009",
+          "nome": "São João d'Aliança",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "5200308",
+          "nome": "Alexânia",
+          "amostra": 2,
+          "estimado": 2
+        }
+      ]
+    },
+    {
+      "ufSigla": "AM",
+      "ufCodigo": "13",
+      "ufNome": "Amazonas",
+      "regiao": "Norte",
+      "amostra": 52,
+      "estimado": 52,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 33,
+      "obitosEstimado": 33,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1996": 14,
+        "1998": 3,
+        "1999": 5,
+        "2000": 1,
+        "2001": 3,
+        "2002": 5,
+        "2003": 1,
+        "2004": 3,
+        "2005": 2,
+        "2006": 1,
+        "2007": 3,
+        "2013": 2,
+        "2016": 2,
+        "2017": 1,
+        "2018": 1,
+        "2019": 1,
+        "2023": 2,
+        "2024": 2
+      },
+      "porAnoEstimado": {
+        "1996": 14,
+        "1998": 3,
+        "1999": 5,
+        "2000": 1,
+        "2001": 3,
+        "2002": 5,
+        "2003": 1,
+        "2004": 3,
+        "2005": 2,
+        "2006": 1,
+        "2007": 3,
+        "2013": 2,
+        "2016": 2,
+        "2017": 1,
+        "2018": 1,
+        "2019": 1,
+        "2023": 2,
+        "2024": 2
+      },
+      "porMes": {
+        "1996-01": 4,
+        "1996-02": 1,
+        "1996-03": 4,
+        "1996-04": 1,
+        "1996-06": 1,
+        "1996-08": 2,
+        "1996-11": 1,
+        "1998-02": 2,
+        "1998-11": 1,
+        "1999-02": 1,
+        "1999-05": 1,
+        "1999-06": 1,
+        "1999-07": 1,
+        "1999-08": 1,
+        "2000-02": 1,
+        "2001-06": 1,
+        "2001-07": 1,
+        "2001-08": 1,
+        "2002-02": 1,
+        "2002-03": 3,
+        "2002-12": 1,
+        "2003-05": 1,
+        "2004-03": 1,
+        "2004-06": 1,
+        "2004-11": 1,
+        "2005-06": 1,
+        "2005-12": 1,
+        "2006-02": 1,
+        "2007-03": 2,
+        "2007-06": 1,
+        "2013-01": 1,
+        "2013-03": 1,
+        "2016-05": 1,
+        "2016-07": 1,
+        "2017-03": 1,
+        "2018-12": 1,
+        "2019-02": 1,
+        "2023-02": 1,
+        "2023-04": 1,
+        "2024-02": 1,
+        "2024-03": 1
+      },
+      "porMesEstimado": {
+        "1996-01": 4,
+        "1996-02": 1,
+        "1996-03": 4,
+        "1996-04": 1,
+        "1996-06": 1,
+        "1996-08": 2,
+        "1996-11": 1,
+        "1998-02": 2,
+        "1998-11": 1,
+        "1999-02": 1,
+        "1999-05": 1,
+        "1999-06": 1,
+        "1999-07": 1,
+        "1999-08": 1,
+        "2000-02": 1,
+        "2001-06": 1,
+        "2001-07": 1,
+        "2001-08": 1,
+        "2002-02": 1,
+        "2002-03": 3,
+        "2002-12": 1,
+        "2003-05": 1,
+        "2004-03": 1,
+        "2004-06": 1,
+        "2004-11": 1,
+        "2005-06": 1,
+        "2005-12": 1,
+        "2006-02": 1,
+        "2007-03": 2,
+        "2007-06": 1,
+        "2013-01": 1,
+        "2013-03": 1,
+        "2016-05": 1,
+        "2016-07": 1,
+        "2017-03": 1,
+        "2018-12": 1,
+        "2019-02": 1,
+        "2023-02": 1,
+        "2023-04": 1,
+        "2024-02": 1,
+        "2024-03": 1
+      },
+      "obitosPorAno": {
+        "1996": 12,
+        "1998": 1,
+        "1999": 4,
+        "2001": 2,
+        "2002": 2,
+        "2004": 2,
+        "2005": 2,
+        "2006": 1,
+        "2007": 3,
+        "2016": 1,
+        "2023": 1,
+        "2024": 2
+      },
+      "obitosPorAnoEstimado": {
+        "1996": 12,
+        "1998": 1,
+        "1999": 4,
+        "2001": 2,
+        "2002": 2,
+        "2004": 2,
+        "2005": 2,
+        "2006": 1,
+        "2007": 3,
+        "2016": 1,
+        "2023": 1,
+        "2024": 2
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 52
+        },
+        "evolucao": {
+          "Óbito": 33,
+          "Não óbito": 19
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 45,
+          "Feminino": 7
+        },
+        "faixaEtaria": {
+          "18-29 anos": 18,
+          "30-59 anos": 17,
+          "12-17 anos": 14,
+          "5-11 anos": 1,
+          "60+ anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "1302504",
+          "nome": "Manacapuru",
+          "amostra": 7,
+          "estimado": 7
+        },
+        {
+          "codigo": "1301902",
+          "nome": "Itacoatiara",
+          "amostra": 5,
+          "estimado": 5
+        },
+        {
+          "codigo": "1301852",
+          "nome": "Iranduba",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "1300102",
+          "nome": "Anori",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1301209",
+          "nome": "Coari",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1303536",
+          "nome": "Presidente Figueiredo",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1303601",
+          "nome": "Santa Isabel do Rio Negro",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1300409",
+          "nome": "Barcelos",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1300805",
+          "nome": "Borba",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1301308",
+          "nome": "Codajás",
+          "amostra": 2,
+          "estimado": 2
+        }
+      ]
+    },
+    {
+      "ufSigla": "MT",
+      "ufCodigo": "51",
+      "ufNome": "Mato Grosso",
+      "regiao": "Centro-Oeste",
+      "amostra": 27,
+      "estimado": 27,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 17,
+      "obitosEstimado": 17,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1998": 1,
+        "1999": 5,
+        "2000": 7,
+        "2001": 2,
+        "2003": 4,
+        "2004": 1,
+        "2006": 1,
+        "2007": 1,
+        "2008": 2,
+        "2009": 2,
+        "2017": 1
+      },
+      "porAnoEstimado": {
+        "1998": 1,
+        "1999": 5,
+        "2000": 7,
+        "2001": 2,
+        "2003": 4,
+        "2004": 1,
+        "2006": 1,
+        "2007": 1,
+        "2008": 2,
+        "2009": 2,
+        "2017": 1
+      },
+      "porMes": {
+        "1998-02": 1,
+        "1999-01": 2,
+        "1999-03": 1,
+        "1999-04": 1,
+        "1999-05": 1,
+        "2000-01": 2,
+        "2000-02": 3,
+        "2000-03": 1,
+        "2000-04": 1,
+        "2001-04": 1,
+        "2001-12": 1,
+        "2003-03": 2,
+        "2003-04": 2,
+        "2004-01": 1,
+        "2006-03": 1,
+        "2007-12": 1,
+        "2008-01": 1,
+        "2008-04": 1,
+        "2009-05": 1,
+        "2009-09": 1,
+        "2017-05": 1
+      },
+      "porMesEstimado": {
+        "1998-02": 1,
+        "1999-01": 2,
+        "1999-03": 1,
+        "1999-04": 1,
+        "1999-05": 1,
+        "2000-01": 2,
+        "2000-02": 3,
+        "2000-03": 1,
+        "2000-04": 1,
+        "2001-04": 1,
+        "2001-12": 1,
+        "2003-03": 2,
+        "2003-04": 2,
+        "2004-01": 1,
+        "2006-03": 1,
+        "2007-12": 1,
+        "2008-01": 1,
+        "2008-04": 1,
+        "2009-05": 1,
+        "2009-09": 1,
+        "2017-05": 1
+      },
+      "obitosPorAno": {
+        "1998": 1,
+        "1999": 4,
+        "2000": 3,
+        "2001": 1,
+        "2003": 2,
+        "2006": 1,
+        "2007": 1,
+        "2008": 2,
+        "2009": 1,
+        "2017": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1998": 1,
+        "1999": 4,
+        "2000": 3,
+        "2001": 1,
+        "2003": 2,
+        "2006": 1,
+        "2007": 1,
+        "2008": 2,
+        "2009": 1,
+        "2017": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 27
+        },
+        "evolucao": {
+          "Óbito": 17,
+          "Não óbito": 10
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 24,
+          "Feminino": 3
+        },
+        "faixaEtaria": {
+          "30-59 anos": 12,
+          "5-11 anos": 2,
+          "1-4 anos": 1,
+          "18-29 anos": 6,
+          "12-17 anos": 4,
+          "60+ anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "5102504",
+          "nome": "Cáceres",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "5101803",
+          "nome": "Barra do Garças",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "5102603",
+          "nome": "Campinápolis",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "5108808",
+          "nome": "Nova Guarita",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "5103304",
+          "nome": "Comodoro",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5103502",
+          "nome": "Diamantino",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5103700",
+          "nome": "Feliz Natal",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5104104",
+          "nome": "Guarantã do Norte",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5105101",
+          "nome": "Juara",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5105150",
+          "nome": "Juína",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "SC",
+      "ufCodigo": "42",
+      "ufNome": "Santa Catarina",
+      "regiao": "Sul",
+      "amostra": 27,
+      "estimado": 27,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 7,
+      "obitosEstimado": 7,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2019": 2,
+        "2020": 17,
+        "2021": 8
+      },
+      "porAnoEstimado": {
+        "2019": 2,
+        "2020": 17,
+        "2021": 8
+      },
+      "porMes": {
+        "2019-03": 1,
+        "2019-06": 1,
+        "2020-01": 3,
+        "2020-02": 5,
+        "2020-03": 4,
+        "2020-04": 4,
+        "2020-05": 1,
+        "2021-01": 1,
+        "2021-02": 1,
+        "2021-03": 3,
+        "2021-04": 2,
+        "2021-05": 1
+      },
+      "porMesEstimado": {
+        "2019-03": 1,
+        "2019-06": 1,
+        "2020-01": 3,
+        "2020-02": 5,
+        "2020-03": 4,
+        "2020-04": 4,
+        "2020-05": 1,
+        "2021-01": 1,
+        "2021-02": 1,
+        "2021-03": 3,
+        "2021-04": 2,
+        "2021-05": 1
+      },
+      "obitosPorAno": {
+        "2019": 2,
+        "2020": 2,
+        "2021": 3
+      },
+      "obitosPorAnoEstimado": {
+        "2019": 2,
+        "2020": 2,
+        "2021": 3
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 27
+        },
+        "evolucao": {
+          "Óbito": 7,
+          "Não óbito": 20
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 25,
+          "Feminino": 2
+        },
+        "faixaEtaria": {
+          "30-59 anos": 21,
+          "18-29 anos": 4,
+          "60+ anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "4202404",
+          "nome": "Blumenau",
+          "amostra": 8,
+          "estimado": 8
+        },
+        {
+          "codigo": "4207502",
+          "nome": "Indaial",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "4213203",
+          "nome": "Pomerode",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "4200606",
+          "nome": "Águas Mornas",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4201109",
+          "nome": "Anitápolis",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4203204",
+          "nome": "Camboriú",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4208104",
+          "nome": "Itaiópolis",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4208906",
+          "nome": "Jaraguá do Sul",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4209102",
+          "nome": "Joinville",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4212304",
+          "nome": "Paulo Lopes",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "TO",
+      "ufCodigo": "17",
+      "ufNome": "Tocantins",
+      "regiao": "Norte",
+      "amostra": 26,
+      "estimado": 26,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 12,
+      "obitosEstimado": 12,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1999": 16,
+        "2000": 6,
+        "2017": 1,
+        "2022": 2,
+        "2025": 1
+      },
+      "porAnoEstimado": {
+        "1999": 16,
+        "2000": 6,
+        "2017": 1,
+        "2022": 2,
+        "2025": 1
+      },
+      "porMes": {
+        "1999-02": 1,
+        "1999-03": 2,
+        "1999-05": 2,
+        "1999-06": 1,
+        "1999-11": 1,
+        "1999-12": 9,
+        "2000-01": 3,
+        "2000-03": 2,
+        "2000-05": 1,
+        "2017-01": 1,
+        "2022-03": 2,
+        "2025-01": 1
+      },
+      "porMesEstimado": {
+        "1999-02": 1,
+        "1999-03": 2,
+        "1999-05": 2,
+        "1999-06": 1,
+        "1999-11": 1,
+        "1999-12": 9,
+        "2000-01": 3,
+        "2000-03": 2,
+        "2000-05": 1,
+        "2017-01": 1,
+        "2022-03": 2,
+        "2025-01": 1
+      },
+      "obitosPorAno": {
+        "1999": 5,
+        "2000": 4,
+        "2017": 1,
+        "2022": 1,
+        "2025": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1999": 5,
+        "2000": 4,
+        "2017": 1,
+        "2022": 1,
+        "2025": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 26
+        },
+        "evolucao": {
+          "Óbito": 12,
+          "Não óbito": 14
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 23,
+          "Feminino": 3
+        },
+        "faixaEtaria": {
+          "5-11 anos": 3,
+          "30-59 anos": 7,
+          "18-29 anos": 14,
+          "1-4 anos": 1,
+          "12-17 anos": 1
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "1703842",
+          "nome": "Campos Lindos",
+          "amostra": 10,
+          "estimado": 10
+        },
+        {
+          "codigo": "1700400",
+          "nome": "Almas",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1702406",
+          "nome": "Arraias",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1718501",
+          "nome": "Recursolândia",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1701002",
+          "nome": "Ananás",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1702703",
+          "nome": "Aurora do Tocantins",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1707652",
+          "nome": "Figueirópolis",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1709302",
+          "nome": "Guaraí",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1709500",
+          "nome": "Gurupi",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1713601",
+          "nome": "Monte do Carmo",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "RS",
+      "ufCodigo": "43",
+      "ufNome": "Rio Grande do Sul",
+      "regiao": "Sul",
+      "amostra": 21,
+      "estimado": 21,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 9,
+      "obitosEstimado": 9,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2008": 5,
+        "2009": 16
+      },
+      "porAnoEstimado": {
+        "2008": 5,
+        "2009": 16
+      },
+      "porMes": {
+        "2008-12": 5,
+        "2009-01": 5,
+        "2009-03": 10,
+        "2009-04": 1
+      },
+      "porMesEstimado": {
+        "2008-12": 5,
+        "2009-01": 5,
+        "2009-03": 10,
+        "2009-04": 1
+      },
+      "obitosPorAno": {
+        "2008": 4,
+        "2009": 5
+      },
+      "obitosPorAnoEstimado": {
+        "2008": 4,
+        "2009": 5
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 21
+        },
+        "evolucao": {
+          "Óbito": 9,
+          "Não óbito": 12
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 15,
+          "Feminino": 6
+        },
+        "faixaEtaria": {
+          "18-29 anos": 6,
+          "30-59 anos": 11,
+          "12-17 anos": 2,
+          "60+ anos": 1,
+          "5-11 anos": 1
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "4316808",
+          "nome": "Santa Cruz do Sul",
+          "amostra": 7,
+          "estimado": 7
+        },
+        {
+          "codigo": "4322707",
+          "nome": "Vera Cruz",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "4317509",
+          "nome": "Santo Ângelo",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "4314555",
+          "nome": "Pirapó",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4301503",
+          "nome": "Augusto Pestana",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4302501",
+          "nome": "Bossoroca",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4307500",
+          "nome": "Espumoso",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4310207",
+          "nome": "Ijuí",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4311155",
+          "nome": "Jóia",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "RR",
+      "ufCodigo": "14",
+      "ufNome": "Roraima",
+      "regiao": "Norte",
+      "amostra": 19,
+      "estimado": 19,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 13,
+      "obitosEstimado": 13,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1994": 2,
+        "1995": 1,
+        "1998": 7,
+        "1999": 3,
+        "2001": 1,
+        "2002": 2,
+        "2005": 1,
+        "2007": 1,
+        "2023": 1
+      },
+      "porAnoEstimado": {
+        "1994": 2,
+        "1995": 1,
+        "1998": 7,
+        "1999": 3,
+        "2001": 1,
+        "2002": 2,
+        "2005": 1,
+        "2007": 1,
+        "2023": 1
+      },
+      "porMes": {
+        "1994-11": 2,
+        "1995-02": 1,
+        "1998-01": 1,
+        "1998-05": 1,
+        "1998-06": 1,
+        "1998-07": 2,
+        "1998-09": 1,
+        "1998-10": 1,
+        "1999-09": 1,
+        "1999-10": 1,
+        "1999-11": 1,
+        "2001-11": 1,
+        "2002-03": 1,
+        "2002-12": 1,
+        "2005-01": 1,
+        "2007-02": 1,
+        "2023-08": 1
+      },
+      "porMesEstimado": {
+        "1994-11": 2,
+        "1995-02": 1,
+        "1998-01": 1,
+        "1998-05": 1,
+        "1998-06": 1,
+        "1998-07": 2,
+        "1998-09": 1,
+        "1998-10": 1,
+        "1999-09": 1,
+        "1999-10": 1,
+        "1999-11": 1,
+        "2001-11": 1,
+        "2002-03": 1,
+        "2002-12": 1,
+        "2005-01": 1,
+        "2007-02": 1,
+        "2023-08": 1
+      },
+      "obitosPorAno": {
+        "1994": 2,
+        "1998": 4,
+        "1999": 2,
+        "2001": 1,
+        "2002": 1,
+        "2005": 1,
+        "2007": 1,
+        "2023": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1994": 2,
+        "1998": 4,
+        "1999": 2,
+        "2001": 1,
+        "2002": 1,
+        "2005": 1,
+        "2007": 1,
+        "2023": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 19
+        },
+        "evolucao": {
+          "Óbito": 13,
+          "Não óbito": 6
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 16,
+          "Feminino": 3
+        },
+        "faixaEtaria": {
+          "Não informado": 2,
+          "18-29 anos": 11,
+          "30-59 anos": 3,
+          "12-17 anos": 3
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "1400050",
+          "nome": "Alto Alegre",
+          "amostra": 8,
+          "estimado": 8
+        },
+        {
+          "codigo": "1400308",
+          "nome": "Mucajaí",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "1400175",
+          "nome": "Cantá",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1400704",
+          "nome": "Uiramutã",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "1400233",
+          "nome": "Caroebe",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1400282",
+          "nome": "Iracema",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1400456",
+          "nome": "Pacaraima",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1400472",
+          "nome": "Rorainópolis",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "PR",
+      "ufCodigo": "41",
+      "ufNome": "Paraná",
+      "regiao": "Sul",
+      "amostra": 14,
+      "estimado": 14,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 2,
+      "obitosEstimado": 2,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2008": 2,
+        "2019": 12
+      },
+      "porAnoEstimado": {
+        "2008": 2,
+        "2019": 12
+      },
+      "porMes": {
+        "2008-02": 2,
+        "2019-01": 5,
+        "2019-02": 3,
+        "2019-03": 3,
+        "2019-04": 1
+      },
+      "porMesEstimado": {
+        "2008-02": 2,
+        "2019-01": 5,
+        "2019-02": 3,
+        "2019-03": 3,
+        "2019-04": 1
+      },
+      "obitosPorAno": {
+        "2008": 1,
+        "2019": 1
+      },
+      "obitosPorAnoEstimado": {
+        "2008": 1,
+        "2019": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 14
+        },
+        "evolucao": {
+          "Não óbito": 12,
+          "Óbito": 2
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 12,
+          "Feminino": 2
+        },
+        "faixaEtaria": {
+          "18-29 anos": 2,
+          "30-59 anos": 6,
+          "5-11 anos": 1,
+          "60+ anos": 3,
+          "12-17 anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "4100202",
+          "nome": "Adrianópolis",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4101200",
+          "nome": "Antonina",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4109500",
+          "nome": "Guaraqueçaba",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4113254",
+          "nome": "Laranjal",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4116208",
+          "nome": "Morretes",
+          "amostra": 2,
+          "estimado": 2
+        },
+        {
+          "codigo": "4109609",
+          "nome": "Guaratuba",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4118204",
+          "nome": "Paranaguá",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4120804",
+          "nome": "Quatro Barras",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "4125506",
+          "nome": "São José dos Pinhais",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "MS",
+      "ufCodigo": "50",
+      "ufNome": "Mato Grosso do Sul",
+      "regiao": "Centro-Oeste",
+      "amostra": 12,
+      "estimado": 12,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 5,
+      "obitosEstimado": 5,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1996": 1,
+        "2008": 9,
+        "2010": 1,
+        "2015": 1
+      },
+      "porAnoEstimado": {
+        "1996": 1,
+        "2008": 9,
+        "2010": 1,
+        "2015": 1
+      },
+      "porMes": {
+        "1996-08": 1,
+        "2008-01": 7,
+        "2008-02": 2,
+        "2010-02": 1,
+        "2015-03": 1
+      },
+      "porMesEstimado": {
+        "1996-08": 1,
+        "2008-01": 7,
+        "2008-02": 2,
+        "2010-02": 1,
+        "2015-03": 1
+      },
+      "obitosPorAno": {
+        "1996": 1,
+        "2008": 2,
+        "2010": 1,
+        "2015": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1996": 1,
+        "2008": 2,
+        "2010": 1,
+        "2015": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 12
+        },
+        "evolucao": {
+          "Óbito": 5,
+          "Não óbito": 7
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Feminino": 5,
+          "Masculino": 7
+        },
+        "faixaEtaria": {
+          "12-17 anos": 1,
+          "30-59 anos": 7,
+          "18-29 anos": 2,
+          "60+ anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "5002209",
+          "nome": "Bonito",
+          "amostra": 4,
+          "estimado": 4
+        },
+        {
+          "codigo": "5000203",
+          "nome": "Água Clara",
+          "amostra": 3,
+          "estimado": 3
+        },
+        {
+          "codigo": "5001243",
+          "nome": "Aral Moreira",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5003207",
+          "nome": "Corumbá",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5005400",
+          "nome": "Maracaju",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5006606",
+          "nome": "Ponta Porã",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "5007109",
+          "nome": "Ribas do Rio Pardo",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    },
+    {
+      "ufSigla": "DF",
+      "ufCodigo": "53",
+      "ufNome": "Distrito Federal",
+      "regiao": "Centro-Oeste",
+      "amostra": 10,
+      "estimado": 10,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 8,
+      "obitosEstimado": 8,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2000": 2,
+        "2007": 1,
+        "2008": 5,
+        "2017": 2
+      },
+      "porAnoEstimado": {
+        "2000": 2,
+        "2007": 1,
+        "2008": 5,
+        "2017": 2
+      },
+      "porMes": {
+        "2000-03": 1,
+        "2000-09": 1,
+        "2007-12": 1,
+        "2008-01": 5,
+        "2017-02": 1,
+        "2017-11": 1
+      },
+      "porMesEstimado": {
+        "2000-03": 1,
+        "2000-09": 1,
+        "2007-12": 1,
+        "2008-01": 5,
+        "2017-02": 1,
+        "2017-11": 1
+      },
+      "obitosPorAno": {
+        "2000": 2,
+        "2008": 4,
+        "2017": 2
+      },
+      "obitosPorAnoEstimado": {
+        "2000": 2,
+        "2008": 4,
+        "2017": 2
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 10
+        },
+        "evolucao": {
+          "Óbito": 8,
+          "Não óbito": 2
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 9,
+          "Feminino": 1
+        },
+        "faixaEtaria": {
+          "18-29 anos": 2,
+          "30-59 anos": 8
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "5300108",
+          "nome": "Brasília",
+          "amostra": 10,
+          "estimado": 10
+        }
+      ]
+    },
+    {
+      "ufSigla": "BA",
+      "ufCodigo": "29",
+      "ufNome": "Bahia",
+      "regiao": "Nordeste",
+      "amostra": 10,
+      "estimado": 10,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 3,
+      "obitosEstimado": 3,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2000": 10
+      },
+      "porAnoEstimado": {
+        "2000": 10
+      },
+      "porMes": {
+        "2000-01": 6,
+        "2000-03": 1,
+        "2000-04": 1,
+        "2000-05": 2
+      },
+      "porMesEstimado": {
+        "2000-01": 6,
+        "2000-03": 1,
+        "2000-04": 1,
+        "2000-05": 2
+      },
+      "obitosPorAno": {
+        "2000": 3
+      },
+      "obitosPorAnoEstimado": {
+        "2000": 3
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 10
+        },
+        "evolucao": {
+          "Óbito": 3,
+          "Não óbito": 7
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 10
+        },
+        "faixaEtaria": {
+          "18-29 anos": 5,
+          "30-59 anos": 4,
+          "12-17 anos": 1
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "2909109",
+          "nome": "Coribe",
+          "amostra": 10,
+          "estimado": 10
+        }
+      ]
+    },
+    {
+      "ufSigla": "MA",
+      "ufCodigo": "21",
+      "ufNome": "Maranhão",
+      "regiao": "Nordeste",
+      "amostra": 2,
+      "estimado": 2,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 1,
+      "obitosEstimado": 1,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1995": 2
+      },
+      "porAnoEstimado": {
+        "1995": 2
+      },
+      "porMes": {
+        "1995-04": 2
+      },
+      "porMesEstimado": {
+        "1995-04": 2
+      },
+      "obitosPorAno": {
+        "1995": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1995": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 2
+        },
+        "evolucao": {
+          "Não óbito": 1,
+          "Óbito": 1
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 2
+        },
+        "faixaEtaria": {
+          "30-59 anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "2100600",
+          "nome": "Amarante do Maranhão",
+          "amostra": 2,
+          "estimado": 2
+        }
+      ]
+    },
+    {
+      "ufSigla": "RO",
+      "ufCodigo": "11",
+      "ufNome": "Rondônia",
+      "regiao": "Norte",
+      "amostra": 2,
+      "estimado": 2,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 2,
+      "obitosEstimado": 2,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "1997": 1,
+        "2001": 1
+      },
+      "porAnoEstimado": {
+        "1997": 1,
+        "2001": 1
+      },
+      "porMes": {
+        "1997-04": 1,
+        "2001-01": 1
+      },
+      "porMesEstimado": {
+        "1997-04": 1,
+        "2001-01": 1
+      },
+      "obitosPorAno": {
+        "1997": 1,
+        "2001": 1
+      },
+      "obitosPorAnoEstimado": {
+        "1997": 1,
+        "2001": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 2
+        },
+        "evolucao": {
+          "Óbito": 2
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 2
+        },
+        "faixaEtaria": {
+          "30-59 anos": 2
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "1100205",
+          "nome": "Porto Velho",
+          "amostra": 2,
+          "estimado": 2
+        }
+      ]
+    },
+    {
+      "ufSigla": "AC",
+      "ufCodigo": "12",
+      "ufNome": "Acre",
+      "regiao": "Norte",
+      "amostra": 2,
+      "estimado": 2,
+      "fracaoAmostral": 1,
+      "obitosAmostra": 1,
+      "obitosEstimado": 1,
+      "utiAmostra": 0,
+      "internadosAmostra": 0,
+      "porAno": {
+        "2000": 1,
+        "2020": 1
+      },
+      "porAnoEstimado": {
+        "2000": 1,
+        "2020": 1
+      },
+      "porMes": {
+        "2000-06": 1,
+        "2020-01": 1
+      },
+      "porMesEstimado": {
+        "2000-06": 1,
+        "2020-01": 1
+      },
+      "obitosPorAno": {
+        "2020": 1
+      },
+      "obitosPorAnoEstimado": {
+        "2020": 1
+      },
+      "perfil": {
+        "classificacao": {
+          "Caso confirmado": 2
+        },
+        "evolucao": {
+          "Não óbito": 1,
+          "Óbito": 1
+        },
+        "uti": {},
+        "hospitalizacao": {},
+        "vacinaGripe": {},
+        "sexo": {
+          "Masculino": 2
+        },
+        "faixaEtaria": {
+          "18-29 anos": 1,
+          "12-17 anos": 1
+        }
+      },
+      "municipiosAmostra": [
+        {
+          "codigo": "1200013",
+          "nome": "Acrelândia",
+          "amostra": 1,
+          "estimado": 1
+        },
+        {
+          "codigo": "1200385",
+          "nome": "Plácido de Castro",
+          "amostra": 1,
+          "estimado": 1
+        }
+      ]
+    }
+  ]
+}

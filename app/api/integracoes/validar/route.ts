@@ -27,6 +27,18 @@ const ALLOWLIST: Record<string, { base: string; caminho: string; chave: string; 
     chave: "dengue",
     requerAuth: false,
   },
+  zika: {
+    base: "https://apidadosabertos.saude.gov.br",
+    caminho: "/arboviroses/zikavirus",
+    chave: "zikavirus",
+    requerAuth: false,
+  },
+  febreamarela: {
+    base: "https://apidadosabertos.saude.gov.br",
+    caminho: "/arboviroses/febre-amarela-humanos-primatas-nao-humanos",
+    chave: "febre_amarela_humanos_primatas",
+    requerAuth: false,
+  },
   populacao: {
     base: "https://servicodados.ibge.gov.br",
     caminho: "/api/v3/agregados/6579/periodos/2025/variaveis/9324?localidades=N3[all]",
@@ -149,6 +161,14 @@ export async function POST(request: Request) {
 
     const schemaOk = chaves.length > 0;
 
+    // Só os NOMES dos campos do primeiro registro (nunca os valores): serve para
+    // conferir se o schema da fonte bate com o adaptador do ETL.
+    const primeiro = Array.isArray(json)
+      ? json[0]
+      : chaves.map((k) => objeto[k]).find((v): v is unknown[] => Array.isArray(v) && v.length > 0)?.[0];
+    const camposRegistro =
+      primeiro && typeof primeiro === "object" ? Object.keys(primeiro as Record<string, unknown>).sort() : [];
+
     return NextResponse.json({
       estado: registros === 0 ? "sem_dados" : schemaOk ? "conectado" : "resposta_invalida",
       recurso: recursoId,
@@ -158,6 +178,7 @@ export async function POST(request: Request) {
       totalRegistros,
       registrosNaPagina: registros,
       chavesResposta: chaves.slice(0, 12),
+      camposRegistro: camposRegistro.slice(0, 80),
       schemaValidado: schemaOk,
       mensagem:
         registros === 0

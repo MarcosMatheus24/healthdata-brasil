@@ -1,0 +1,16 @@
+{
+  "agravo": "dengue",
+  "estado": "erro",
+  "mensagem": "A rota /arboviroses/dengue não alcança 2019 em diante: ela não informa total_registros, o filtro nu_ano devolve 502 (também combinado com id_municip) e a série começa em 2000 — os registros recentes ficam a dezenas de milhões de posições, e a latência cresce ~7 s por milhão de offset até o corte de 60 s do servidor. Verificado em 27/11/2026.",
+  "geradoEm": null,
+  "metodologia": null,
+  "coleta": null,
+  "registrosLidos": null,
+  "camposFonte": [],
+  "perfilGlobal": null,
+  "ufs": [],
+  "ultimaTentativa": {
+    "em": "2026-11-27T03:30:00.000Z",
+    "erro": "offset 4.000.000 = 21,9 s (registro de 2008); nu_ano=2024 → 502 Proxy Error após 60 s; id_municip+nu_ano → 502"
+  }
+}

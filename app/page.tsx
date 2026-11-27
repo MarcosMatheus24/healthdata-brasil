@@ -7,8 +7,10 @@ import {
   linhasIndicadores,
   resumoNacional,
   serieMensal,
+  statusAgravos,
   statusFontes,
 } from "@/lib/data";
+import { MonitoramentoAgravos } from "@/components/monitoramento-agravos";
 import { compacto, dataHora, int, pct } from "@/lib/format";
 import { BarRanking, SerieMensal } from "@/components/charts";
 import { AnimatedNumber } from "@/components/animated-number";
@@ -62,6 +64,17 @@ export default async function Home() {
   const cobertura = coberturaGlobal(base);
   const top = [...linhas].sort((a, b) => (b.taxaPor100Mil ?? 0) - (a.taxaPor100Mil ?? 0)).slice(0, 6);
   const coleta = base.meta.coletas?.[0];
+  const cartoes = statusAgravos(base).map((a) => ({
+    id: a.id,
+    estado: a.estado,
+    mensagem: a.mensagem,
+    anoReferencia: a.anoReferencia,
+    ultimaColeta: a.ultimaColeta,
+    coberturaPct: a.coberturaPct,
+    resumo: a.resumo,
+    serie: a.estado === "coletado" ? serieMensal(base, "BR", a.id).slice(-36) : [],
+  }));
+  const comColeta = cartoes.filter((c) => c.estado === "coletado").length;
 
   return (
     <>
@@ -228,12 +241,30 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ================================================================ MONITORAMENTO POR DOENÇA */}
+      <section className="wrap pt-16">
+        <div className="mb-6 flex flex-wrap items-end justify-between gap-4" data-reveal>
+          <div>
+            <p className="kicker">Monitoramento · {comColeta} de {cartoes.length} com coleta publicada</p>
+            <h2 className="mt-2 text-[clamp(1.6rem,2.6vw,2.1rem)] leading-tight">Doenças monitoradas</h2>
+            <p className="mt-2 max-w-2xl text-[0.88rem] leading-relaxed text-ink-mute">
+              Cada cartão declara o que conta como caso. Sem coleta, o cartão fica vazio de propósito —
+              o portal não preenche lacunas com zero.
+            </p>
+          </div>
+          <Link href="/metodologia#agravos" className="mono text-[0.7rem] uppercase tracking-[0.14em] text-brand link-underline">
+            Definições de caso →
+          </Link>
+        </div>
+        <MonitoramentoAgravos cartoes={cartoes} />
+      </section>
+
       {/* ================================================================ KPIs */}
       <section className="wrap py-16">
         <div className="mb-6 flex flex-wrap items-end justify-between gap-4" data-reveal>
           <div>
-            <p className="kicker">Painel nacional · {ano}</p>
-            <h2 className="mt-2 text-[clamp(1.6rem,2.6vw,2.1rem)] leading-tight">Indicadores-chave do recorte</h2>
+            <p className="kicker">Painel nacional · SRAG · {ano}</p>
+            <h2 className="mt-2 text-[clamp(1.6rem,2.6vw,2.1rem)] leading-tight">Indicadores-chave de SRAG</h2>
           </div>
           <Link href="/metodologia" className="mono text-[0.7rem] uppercase tracking-[0.14em] text-brand link-underline">
             Ler as limitações →

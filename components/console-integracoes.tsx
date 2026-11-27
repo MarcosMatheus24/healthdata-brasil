@@ -12,6 +12,7 @@ type RespostaValidacao = {
   totalRegistros?: number | null;
   registrosNaPagina?: number;
   chavesResposta?: string[];
+  camposRegistro?: string[];
   schemaValidado?: boolean;
   mensagem?: string;
   verificadoEm?: string;
@@ -129,7 +130,9 @@ export function ConsoleIntegracoes({ recursoInicial = "srag" }: { recursoInicial
             className="mono border border-line-strong px-3 py-2 text-[0.76rem] transition-colors hover:border-brand focus:border-brand focus:outline-none"
           >
             <option value="srag">SRAG 2019-2026 · MS</option>
-            <option value="dengue">Dengue · MS (filtro por ano indisponível)</option>
+            <option value="dengue">Dengue · MS (SINAN)</option>
+            <option value="zika">Zika · MS (SINAN)</option>
+            <option value="febreamarela">Febre amarela (humanos) · MS</option>
             <option value="populacao">População residente · IBGE</option>
             <option value="esus_notifica">e-SUS Notifica (restrito)</option>
           </select>
@@ -199,6 +202,15 @@ export function ConsoleIntegracoes({ recursoInicial = "srag" }: { recursoInicial
                 <p className="mono mt-3 truncate text-[0.68rem] text-ink-mute">
                   chaves: {resposta.chavesResposta.join(", ")}
                 </p>
+              ) : null}
+
+              {resposta.camposRegistro?.length ? (
+                <details className="mt-3 rounded-lg border border-line bg-surface px-3 py-2">
+                  <summary className="mono cursor-pointer text-[0.66rem] uppercase tracking-[0.1em] text-ink-mute">
+                    {resposta.camposRegistro.length} campos por registro (só nomes, sem valores)
+                  </summary>
+                  <p className="mono mt-2 text-[0.66rem] leading-relaxed text-ink-soft">{resposta.camposRegistro.join(", ")}</p>
+                </details>
               ) : null}
 
               {resposta.urlConsultada && (

@@ -1,6 +1,2166 @@
 [
   {
     "ufCodigo": "11",
+    "ano": 2001,
+    "populacao": 1407886
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2001,
+    "populacao": 574355
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2001,
+    "populacao": 2900240
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2001,
+    "populacao": 337237
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2001,
+    "populacao": 6341736
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2001,
+    "populacao": 498735
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2001,
+    "populacao": 1184895
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2001,
+    "populacao": 5730467
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2001,
+    "populacao": 2873010
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2001,
+    "populacao": 7547620
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2001,
+    "populacao": 2815244
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2001,
+    "populacao": 3468594
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2001,
+    "populacao": 8008207
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2001,
+    "populacao": 2856629
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2001,
+    "populacao": 1817301
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2001,
+    "populacao": 13214114
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2001,
+    "populacao": 18127096
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2001,
+    "populacao": 3155016
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2001,
+    "populacao": 14558545
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2001,
+    "populacao": 37630106
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2001,
+    "populacao": 9694709
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2001,
+    "populacao": 5448736
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2001,
+    "populacao": 10309819
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2001,
+    "populacao": 2111036
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2001,
+    "populacao": 2560584
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2001,
+    "populacao": 5116462
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2001,
+    "populacao": 2097447
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2002,
+    "populacao": 1431777
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2002,
+    "populacao": 586942
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2002,
+    "populacao": 2961801
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2002,
+    "populacao": 346871
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2002,
+    "populacao": 6453683
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2002,
+    "populacao": 516511
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2002,
+    "populacao": 1207014
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2002,
+    "populacao": 5803224
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2002,
+    "populacao": 2898223
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2002,
+    "populacao": 7654535
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2002,
+    "populacao": 2852784
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2002,
+    "populacao": 3494893
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2002,
+    "populacao": 8084667
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2002,
+    "populacao": 2887535
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2002,
+    "populacao": 1846039
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2002,
+    "populacao": 13323212
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2002,
+    "populacao": 18343517
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2002,
+    "populacao": 3201722
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2002,
+    "populacao": 14724475
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2002,
+    "populacao": 38177742
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2002,
+    "populacao": 9798006
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2002,
+    "populacao": 5527707
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2002,
+    "populacao": 10408540
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2002,
+    "populacao": 2140624
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2002,
+    "populacao": 2604742
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2002,
+    "populacao": 5210335
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2002,
+    "populacao": 2145839
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2003,
+    "populacao": 1455907
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2003,
+    "populacao": 600595
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2003,
+    "populacao": 3031068
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2003,
+    "populacao": 357302
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2003,
+    "populacao": 6574993
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2003,
+    "populacao": 534835
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2003,
+    "populacao": 1230181
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2003,
+    "populacao": 5873655
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2003,
+    "populacao": 2923725
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2003,
+    "populacao": 7758441
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2003,
+    "populacao": 2888058
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2003,
+    "populacao": 3518595
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2003,
+    "populacao": 8161862
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2003,
+    "populacao": 2917664
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2003,
+    "populacao": 1874613
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2003,
+    "populacao": 13435612
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2003,
+    "populacao": 18553312
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2003,
+    "populacao": 3250219
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2003,
+    "populacao": 14879118
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2003,
+    "populacao": 38709320
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2003,
+    "populacao": 9906866
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2003,
+    "populacao": 5607233
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2003,
+    "populacao": 10510992
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2003,
+    "populacao": 2169688
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2003,
+    "populacao": 2651335
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2003,
+    "populacao": 5306459
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2003,
+    "populacao": 2189789
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2004,
+    "populacao": 1562085
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2004,
+    "populacao": 630328
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2004,
+    "populacao": 3138726
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2004,
+    "populacao": 381896
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2004,
+    "populacao": 6850181
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2004,
+    "populacao": 547400
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2004,
+    "populacao": 1262644
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2004,
+    "populacao": 6021504
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2004,
+    "populacao": 2974698
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2004,
+    "populacao": 7976563
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2004,
+    "populacao": 2962107
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2004,
+    "populacao": 3568350
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2004,
+    "populacao": 8323911
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2004,
+    "populacao": 2980910
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2004,
+    "populacao": 1934596
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2004,
+    "populacao": 13682074
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2004,
+    "populacao": 18993720
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2004,
+    "populacao": 3352024
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2004,
+    "populacao": 15203750
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2004,
+    "populacao": 39825226
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2004,
+    "populacao": 10135388
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2004,
+    "populacao": 5774178
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2004,
+    "populacao": 10726063
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2004,
+    "populacao": 2227794
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2004,
+    "populacao": 2742646
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2004,
+    "populacao": 5508245
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2004,
+    "populacao": 2282049
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2005,
+    "populacao": 1534594
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2005,
+    "populacao": 669736
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2005,
+    "populacao": 3232330
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2005,
+    "populacao": 391317
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2005,
+    "populacao": 6970586
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2005,
+    "populacao": 594587
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2005,
+    "populacao": 1305728
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2005,
+    "populacao": 6103327
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2005,
+    "populacao": 3006885
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2005,
+    "populacao": 8097276
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2005,
+    "populacao": 3003087
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2005,
+    "populacao": 3595886
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2005,
+    "populacao": 8413593
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2005,
+    "populacao": 3015912
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2005,
+    "populacao": 1967791
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2005,
+    "populacao": 13815334
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2005,
+    "populacao": 19237450
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2005,
+    "populacao": 3408365
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2005,
+    "populacao": 15383407
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2005,
+    "populacao": 40442795
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2005,
+    "populacao": 10261856
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2005,
+    "populacao": 5866568
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2005,
+    "populacao": 10845087
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2005,
+    "populacao": 2264468
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2005,
+    "populacao": 2803274
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2005,
+    "populacao": 5619917
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2005,
+    "populacao": 2333108
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2006,
+    "populacao": 1562417
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2006,
+    "populacao": 686652
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2006,
+    "populacao": 3311026
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2006,
+    "populacao": 403344
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2006,
+    "populacao": 7110465
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2006,
+    "populacao": 615715
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2006,
+    "populacao": 1332441
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2006,
+    "populacao": 6184538
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2006,
+    "populacao": 3036290
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2006,
+    "populacao": 8217085
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2006,
+    "populacao": 3043760
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2006,
+    "populacao": 3623215
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2006,
+    "populacao": 8502603
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2006,
+    "populacao": 3050652
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2006,
+    "populacao": 2000738
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2006,
+    "populacao": 13950146
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2006,
+    "populacao": 19479356
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2006,
+    "populacao": 3464285
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2006,
+    "populacao": 15561720
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2006,
+    "populacao": 41055734
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2006,
+    "populacao": 10387378
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2006,
+    "populacao": 5958266
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2006,
+    "populacao": 10963219
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2006,
+    "populacao": 2297981
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2006,
+    "populacao": 2856999
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2006,
+    "populacao": 5730753
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2006,
+    "populacao": 2383784
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2008,
+    "populacao": 1493565
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2008,
+    "populacao": 680075
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2008,
+    "populacao": 3341094
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2008,
+    "populacao": 412783
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2008,
+    "populacao": 7321490
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2008,
+    "populacao": 613166
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2008,
+    "populacao": 1280513
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2008,
+    "populacao": 6305537
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2008,
+    "populacao": 3111881
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2008,
+    "populacao": 8450528
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2008,
+    "populacao": 3106436
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2008,
+    "populacao": 3742604
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2008,
+    "populacao": 8734196
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2008,
+    "populacao": 3127560
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2008,
+    "populacao": 1999374
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2008,
+    "populacao": 14502563
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2008,
+    "populacao": 19850060
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2008,
+    "populacao": 3453646
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2008,
+    "populacao": 15872362
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2008,
+    "populacao": 41011638
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2008,
+    "populacao": 10590171
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2008,
+    "populacao": 6052587
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2008,
+    "populacao": 10855228
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2008,
+    "populacao": 2336060
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2008,
+    "populacao": 2957735
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2008,
+    "populacao": 5844995
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2008,
+    "populacao": 2557159
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2009,
+    "populacao": 1503928
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2009,
+    "populacao": 691132
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2009,
+    "populacao": 3393369
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2009,
+    "populacao": 421499
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2009,
+    "populacao": 7431020
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2009,
+    "populacao": 626609
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2009,
+    "populacao": 1292051
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2009,
+    "populacao": 6367138
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2009,
+    "populacao": 3145325
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2009,
+    "populacao": 8547809
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2009,
+    "populacao": 3137541
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2009,
+    "populacao": 3769977
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2009,
+    "populacao": 8810256
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2009,
+    "populacao": 3156108
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2009,
+    "populacao": 2019679
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2009,
+    "populacao": 14637364
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2009,
+    "populacao": 20033665
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2009,
+    "populacao": 3487199
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2009,
+    "populacao": 16010429
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2009,
+    "populacao": 41384039
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2009,
+    "populacao": 10686247
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2009,
+    "populacao": 6118743
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2009,
+    "populacao": 10914128
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2009,
+    "populacao": 2360498
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2009,
+    "populacao": 3001692
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2009,
+    "populacao": 5926300
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2009,
+    "populacao": 2606885
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2011,
+    "populacao": 1576455
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2011,
+    "populacao": 746386
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2011,
+    "populacao": 3538387
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2011,
+    "populacao": 460165
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2011,
+    "populacao": 7688593
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2011,
+    "populacao": 684309
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2011,
+    "populacao": 1400892
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2011,
+    "populacao": 6645761
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2011,
+    "populacao": 3140328
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2011,
+    "populacao": 8530155
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2011,
+    "populacao": 3198657
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2011,
+    "populacao": 3791315
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2011,
+    "populacao": 8864906
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2011,
+    "populacao": 3143384
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2011,
+    "populacao": 2089819
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2011,
+    "populacao": 14097534
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2011,
+    "populacao": 19728701
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2011,
+    "populacao": 3547055
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2011,
+    "populacao": 16112678
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2011,
+    "populacao": 41587182
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2011,
+    "populacao": 10512349
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2011,
+    "populacao": 6317054
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2011,
+    "populacao": 10733030
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2011,
+    "populacao": 2477542
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2011,
+    "populacao": 3075936
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2011,
+    "populacao": 6080716
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2011,
+    "populacao": 2609998
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2012,
+    "populacao": 1590011
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2012,
+    "populacao": 758786
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2012,
+    "populacao": 3590985
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2012,
+    "populacao": 469524
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2012,
+    "populacao": 7777543
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2012,
+    "populacao": 698602
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2012,
+    "populacao": 1417694
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2012,
+    "populacao": 6714314
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2012,
+    "populacao": 3160748
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2012,
+    "populacao": 8606005
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2012,
+    "populacao": 3228198
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2012,
+    "populacao": 3815171
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2012,
+    "populacao": 8931028
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2012,
+    "populacao": 3165472
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2012,
+    "populacao": 2110867
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2012,
+    "populacao": 14175341
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2012,
+    "populacao": 19855332
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2012,
+    "populacao": 3578067
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2012,
+    "populacao": 16231365
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2012,
+    "populacao": 41901219
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2012,
+    "populacao": 10577755
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2012,
+    "populacao": 6362734
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2012,
+    "populacao": 10768025
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2012,
+    "populacao": 2500365
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2012,
+    "populacao": 3115336
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2012,
+    "populacao": 6154996
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2012,
+    "populacao": 2648532
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2013,
+    "populacao": 1728214
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2013,
+    "populacao": 776463
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2013,
+    "populacao": 3807921
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2013,
+    "populacao": 488072
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2013,
+    "populacao": 7969654
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2013,
+    "populacao": 734996
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2013,
+    "populacao": 1478164
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2013,
+    "populacao": 6794301
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2013,
+    "populacao": 3184166
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2013,
+    "populacao": 8778576
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2013,
+    "populacao": 3373959
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2013,
+    "populacao": 3914421
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2013,
+    "populacao": 9208550
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2013,
+    "populacao": 3300935
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2013,
+    "populacao": 2195662
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2013,
+    "populacao": 15044137
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2013,
+    "populacao": 20593356
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2013,
+    "populacao": 3839366
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2013,
+    "populacao": 16369179
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2013,
+    "populacao": 43663669
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2013,
+    "populacao": 10997465
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2013,
+    "populacao": 6634254
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2013,
+    "populacao": 11164043
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2013,
+    "populacao": 2587269
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2013,
+    "populacao": 3182113
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2013,
+    "populacao": 6434048
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2013,
+    "populacao": 2789761
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2014,
+    "populacao": 1748531
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2014,
+    "populacao": 790101
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2014,
+    "populacao": 3873743
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2014,
+    "populacao": 496936
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2014,
+    "populacao": 8073924
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2014,
+    "populacao": 750912
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2014,
+    "populacao": 1496880
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2014,
+    "populacao": 6850884
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2014,
+    "populacao": 3194718
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2014,
+    "populacao": 8842791
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2014,
+    "populacao": 3408510
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2014,
+    "populacao": 3943885
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2014,
+    "populacao": 9277727
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2014,
+    "populacao": 3321730
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2014,
+    "populacao": 2219574
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2014,
+    "populacao": 15126371
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2014,
+    "populacao": 20734097
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2014,
+    "populacao": 3885049
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2014,
+    "populacao": 16461173
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2014,
+    "populacao": 44035304
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2014,
+    "populacao": 11081692
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2014,
+    "populacao": 6727148
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2014,
+    "populacao": 11207274
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2014,
+    "populacao": 2619657
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2014,
+    "populacao": 3224357
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2014,
+    "populacao": 6523222
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2014,
+    "populacao": 2852372
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2015,
+    "populacao": 1768204
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2015,
+    "populacao": 803513
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2015,
+    "populacao": 3938336
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2015,
+    "populacao": 505665
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2015,
+    "populacao": 8175113
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2015,
+    "populacao": 766679
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2015,
+    "populacao": 1515126
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2015,
+    "populacao": 6904241
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2015,
+    "populacao": 3204028
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2015,
+    "populacao": 8904459
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2015,
+    "populacao": 3442175
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2015,
+    "populacao": 3972202
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2015,
+    "populacao": 9345173
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2015,
+    "populacao": 3340932
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2015,
+    "populacao": 2242937
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2015,
+    "populacao": 15203334
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2015,
+    "populacao": 20869101
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2015,
+    "populacao": 3929911
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2015,
+    "populacao": 16550024
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2015,
+    "populacao": 44396484
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2015,
+    "populacao": 11163018
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2015,
+    "populacao": 6819190
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2015,
+    "populacao": 11247972
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2015,
+    "populacao": 2651235
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2015,
+    "populacao": 3265486
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2015,
+    "populacao": 6610681
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2015,
+    "populacao": 2914830
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2016,
+    "populacao": 1787279
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2016,
+    "populacao": 816687
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2016,
+    "populacao": 4001667
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2016,
+    "populacao": 514229
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2016,
+    "populacao": 8272724
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2016,
+    "populacao": 782295
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2016,
+    "populacao": 1532902
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2016,
+    "populacao": 6954036
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2016,
+    "populacao": 3212180
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2016,
+    "populacao": 8963663
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2016,
+    "populacao": 3474998
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2016,
+    "populacao": 3999415
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2016,
+    "populacao": 9410336
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2016,
+    "populacao": 3358963
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2016,
+    "populacao": 2265779
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2016,
+    "populacao": 15276566
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2016,
+    "populacao": 20997560
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2016,
+    "populacao": 3973697
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2016,
+    "populacao": 16635996
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2016,
+    "populacao": 44749699
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2016,
+    "populacao": 11242720
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2016,
+    "populacao": 6910553
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2016,
+    "populacao": 11286500
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2016,
+    "populacao": 2682386
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2016,
+    "populacao": 3305531
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2016,
+    "populacao": 6695855
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2016,
+    "populacao": 2977216
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2017,
+    "populacao": 1805788
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2017,
+    "populacao": 829619
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2017,
+    "populacao": 4063614
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2017,
+    "populacao": 522636
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2017,
+    "populacao": 8366628
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2017,
+    "populacao": 797722
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2017,
+    "populacao": 1550194
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2017,
+    "populacao": 7000229
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2017,
+    "populacao": 3219257
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2017,
+    "populacao": 9020460
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2017,
+    "populacao": 3507003
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2017,
+    "populacao": 4025558
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2017,
+    "populacao": 9473266
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2017,
+    "populacao": 3375823
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2017,
+    "populacao": 2288116
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2017,
+    "populacao": 15344447
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2017,
+    "populacao": 21119536
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2017,
+    "populacao": 4016356
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2017,
+    "populacao": 16718956
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2017,
+    "populacao": 45094866
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2017,
+    "populacao": 11320892
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2017,
+    "populacao": 7001161
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2017,
+    "populacao": 11322895
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2017,
+    "populacao": 2713147
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2017,
+    "populacao": 3344544
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2017,
+    "populacao": 6778772
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2017,
+    "populacao": 3039444
+  },
+  {
+    "ufCodigo": "11",
+    "ano": 2018,
+    "populacao": 1757589
+  },
+  {
+    "ufCodigo": "12",
+    "ano": 2018,
+    "populacao": 869265
+  },
+  {
+    "ufCodigo": "13",
+    "ano": 2018,
+    "populacao": 4080611
+  },
+  {
+    "ufCodigo": "14",
+    "ano": 2018,
+    "populacao": 576568
+  },
+  {
+    "ufCodigo": "15",
+    "ano": 2018,
+    "populacao": 8513497
+  },
+  {
+    "ufCodigo": "16",
+    "ano": 2018,
+    "populacao": 829494
+  },
+  {
+    "ufCodigo": "17",
+    "ano": 2018,
+    "populacao": 1555229
+  },
+  {
+    "ufCodigo": "21",
+    "ano": 2018,
+    "populacao": 7035055
+  },
+  {
+    "ufCodigo": "22",
+    "ano": 2018,
+    "populacao": 3264531
+  },
+  {
+    "ufCodigo": "23",
+    "ano": 2018,
+    "populacao": 9075649
+  },
+  {
+    "ufCodigo": "24",
+    "ano": 2018,
+    "populacao": 3479010
+  },
+  {
+    "ufCodigo": "25",
+    "ano": 2018,
+    "populacao": 3996496
+  },
+  {
+    "ufCodigo": "26",
+    "ano": 2018,
+    "populacao": 9496294
+  },
+  {
+    "ufCodigo": "27",
+    "ano": 2018,
+    "populacao": 3322820
+  },
+  {
+    "ufCodigo": "28",
+    "ano": 2018,
+    "populacao": 2278308
+  },
+  {
+    "ufCodigo": "29",
+    "ano": 2018,
+    "populacao": 14812617
+  },
+  {
+    "ufCodigo": "31",
+    "ano": 2018,
+    "populacao": 21040662
+  },
+  {
+    "ufCodigo": "32",
+    "ano": 2018,
+    "populacao": 3972388
+  },
+  {
+    "ufCodigo": "33",
+    "ano": 2018,
+    "populacao": 17159960
+  },
+  {
+    "ufCodigo": "35",
+    "ano": 2018,
+    "populacao": 45538936
+  },
+  {
+    "ufCodigo": "41",
+    "ano": 2018,
+    "populacao": 11348937
+  },
+  {
+    "ufCodigo": "42",
+    "ano": 2018,
+    "populacao": 7075494
+  },
+  {
+    "ufCodigo": "43",
+    "ano": 2018,
+    "populacao": 11329605
+  },
+  {
+    "ufCodigo": "50",
+    "ano": 2018,
+    "populacao": 2748023
+  },
+  {
+    "ufCodigo": "51",
+    "ano": 2018,
+    "populacao": 3441998
+  },
+  {
+    "ufCodigo": "52",
+    "ano": 2018,
+    "populacao": 6921161
+  },
+  {
+    "ufCodigo": "53",
+    "ano": 2018,
+    "populacao": 2974703
+  },
+  {
+    "ufCodigo": "11",
     "ano": 2019,
     "populacao": 1777225
   },

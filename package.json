@@ -8,7 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "teste": "node scripts/testes.mjs",
-    "etl": "node scripts/etl.mjs"
+    "etl": "node scripts/etl.mjs",
+    "etl:srag": "node scripts/etl.mjs --agravos=srag",
+    "etl:dengue": "node scripts/etl.mjs --agravos=dengue",
+    "seed": "node scripts/etl.mjs --so-seed",
+    "etl:zika": "node scripts/etl.mjs --agravos=zika",
+    "etl:febreamarela": "node scripts/etl.mjs --agravos=febreamarela"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

@@ -1,8 +1,9 @@
 "use client";
 
+import { AGRAVOS, type AgravoId } from "@/lib/agravos";
 import { useEffect, useMemo, useState } from "react";
 import type { LinhaIndicador, UF } from "@/lib/types";
-import { int, pct } from "@/lib/format";
+import { int, pct, taxa } from "@/lib/format";
 
 type GeoFeature = {
   properties: { codarea: string };
@@ -70,13 +71,16 @@ export function MapaBrasil({
   metrica,
   selecionado,
   onSelecionar,
+  agravo = "srag",
 }: {
   ufs: UF[];
   linhas: LinhaIndicador[];
   metrica: "taxa" | "absoluto";
   selecionado: string | null;
   onSelecionar: (sigla: string | null) => void;
+  agravo?: AgravoId;
 }) {
+  const def = AGRAVOS[agravo];
   const [geo, setGeo] = useState<GeoFeature[] | null>(null);
   const [hover, setHover] = useState<string | null>(null);
 
@@ -100,7 +104,7 @@ export function MapaBrasil({
   const siglaPorCodigo = useMemo(() => new Map(ufs.map((u) => [u.codigo, u])), [ufs]);
 
   const max = useMemo(() => {
-    const vals = linhas.map((l) => (metrica === "taxa" ? l.taxaPor100Mil ?? 0 : l.notificacoesEstimadas));
+    const vals = linhas.map((l) => (l.suprimido ? 0 : metrica === "taxa" ? l.taxaPor100Mil ?? 0 : l.notificacoesEstimadas));
     return Math.max(...vals, 1);
   }, [linhas, metrica]);
 
@@ -163,7 +167,7 @@ export function MapaBrasil({
               {paths.map((p, i) => {
                 const l = porCodigo.get(p.codigo);
                 const uf = siglaPorCodigo.get(p.codigo);
-                const valor = l ? (metrica === "taxa" ? l.taxaPor100Mil ?? 0 : l.notificacoesEstimadas) : 0;
+                const valor = l && !l.suprimido ? (metrica === "taxa" ? l.taxaPor100Mil ?? 0 : l.notificacoesEstimadas) : 0;
                 const sel = selecionado === uf?.sigla;
                 return (
                   <path
@@ -177,7 +181,7 @@ export function MapaBrasil({
                       ativo && ativo !== uf?.sigla ? "opacity-70" : "opacity-100"
                     }`}
                     tabIndex={0}
-                    aria-label={uf ? `${uf.nome}: ${l ? int(l.notificacoesEstimadas) + " notificações estimadas" : "sem dados"}` : p.codigo}
+                    aria-label={uf ? `${uf.nome}: ${l ? (l.suprimido ? "menos de 5 registros (suprimido)" : int(l.notificacoesEstimadas) + " " + def.unidadeContagem) : "sem dados"}` : p.codigo}
                     onFocus={() => setHover(uf?.sigla ?? null)}
                     onBlur={() => setHover(null)}
                     onKeyDown={(e) => {
@@ -189,7 +193,7 @@ export function MapaBrasil({
                     onMouseEnter={() => setHover(uf?.sigla ?? null)}
                     onClick={() => onSelecionar(sel ? null : uf?.sigla ?? null)}
                   >
-                    <title>{uf ? `${uf.nome} — ${l ? int(l.notificacoesEstimadas) : "sem dados"}` : p.codigo}</title>
+                    <title>{uf ? `${uf.nome} — ${l ? (l.suprimido ? "< 5 (suprimido)" : int(l.notificacoesEstimadas)) : "sem dados"}` : p.codigo}</title>
                   </path>
                 );
               })}
@@ -234,7 +238,7 @@ export function MapaBrasil({
               ))}
             </div>
             <span className="mono text-[0.65rem] uppercase tracking-[0.14em] text-ink-mute">
-              {metrica === "taxa" ? `${int(max)} /100 mil` : `${int(max)} notif.`}
+              {metrica === "taxa" ? `${taxa(max)} /100 mil` : `${int(max)} ${def.metodoColeta === "censo" ? "casos" : "est."}`}
             </span>
           </div>
           <span className="mono flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.14em] text-ink-mute">
@@ -255,16 +259,16 @@ export function MapaBrasil({
 
             <dl className="mt-5 space-y-3 text-sm">
               <div className="flex items-baseline justify-between border-b border-line pb-2">
-                <dt className="text-ink-soft">Notificações (estimativa)</dt>
-                <dd className="mono text-[0.95rem] font-medium">{int(linhaAtiva.notificacoesEstimadas)}</dd>
+                <dt className="text-ink-soft">{def.unidadeContagem.charAt(0).toUpperCase() + def.unidadeContagem.slice(1)}{def.metodoColeta === "censo" ? "" : " (estimativa)"}</dt>
+                <dd className="mono text-[0.95rem] font-medium">{linhaAtiva.suprimido ? "suprimido (< 5)" : int(linhaAtiva.notificacoesEstimadas)}</dd>
               </div>
               <div className="flex items-baseline justify-between border-b border-line pb-2">
                 <dt className="text-ink-soft">Taxa por 100 mil hab.</dt>
-                <dd className="mono text-[0.95rem] font-medium">{linhaAtiva.taxaPor100Mil === null ? "não calculável" : int(linhaAtiva.taxaPor100Mil)}</dd>
+                <dd className="mono text-[0.95rem] font-medium">{linhaAtiva.taxaPor100Mil === null ? "não calculável" : taxa(linhaAtiva.taxaPor100Mil)}</dd>
               </div>
               <div className="flex items-baseline justify-between border-b border-line pb-2">
-                <dt className="text-ink-soft">Óbitos por SRAG (estimativa)</dt>
-                <dd className="mono text-[0.95rem] font-medium">{int(linhaAtiva.obitosEstimados)}</dd>
+                <dt className="text-ink-soft">{def.rotuloObito}{def.metodoColeta === "censo" ? "" : " (estimativa)"}</dt>
+                <dd className="mono text-[0.95rem] font-medium">{linhaAtiva.suprimido ? "suprimido" : int(linhaAtiva.obitosEstimados)}</dd>
               </div>
               <div className="flex items-baseline justify-between border-b border-line pb-2">
                 <dt className="text-ink-soft">Letalidade na amostra</dt>
@@ -308,7 +312,7 @@ export function MapaBrasil({
                       <span className="mono text-[0.68rem] text-ink-mute">{String(i + 1).padStart(2, "0")}</span>
                       <span className="text-[0.82rem]">{l.ufNome}</span>
                       <span className="mono ml-auto text-[0.72rem]">
-                        {metrica === "taxa" ? `${int(l.taxaPor100Mil ?? 0)} /100k` : int(l.notificacoesEstimadas)}
+                        {l.suprimido ? "< 5" : metrica === "taxa" ? `${taxa(l.taxaPor100Mil ?? 0)} /100k` : int(l.notificacoesEstimadas)}
                       </span>
                     </button>
                   </li>

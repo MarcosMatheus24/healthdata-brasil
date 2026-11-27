@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getBase } from "@/lib/data";
+import { getBase, statusAgravos } from "@/lib/data";
 import { dataHora, int, pct } from "@/lib/format";
-import { NotaMetodologica, ProvenanceBar, SectionLabel } from "@/components/ui";
+import { Badge, NotaMetodologica, ProvenanceBar, SectionLabel } from "@/components/ui";
+import { LISTA_AGRAVOS } from "@/lib/agravos";
 
 export const revalidate = 60;
 
@@ -34,6 +35,7 @@ const GLOSSARIO = [
 
 export default async function MetodologiaPage() {
   const base = await getBase();
+  const estadosAgravos = statusAgravos(base);
   const m = base.meta.metodologia;
   const q = base.meta.qualidade;
   const erroAmostral = Number((1.96 * Math.sqrt(0.25 / m.registrosColetados) * 100).toFixed(2));
@@ -126,6 +128,73 @@ export default async function MetodologiaPage() {
                 daquela unidade é mais frágil, mesmo quando a taxa parece alta.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* ------------------------------------------------------------- agravos */}
+        <section id="agravos" className="mt-16 scroll-mt-28">
+          <h2 data-reveal className="text-[1.7rem] leading-tight">Doenças monitoradas e definição de caso</h2>
+          <p data-reveal className="mt-3 max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft">
+            “Monitorar uma doença” só faz sentido com uma definição explícita do que é contado. Cada
+            agravo abaixo tem a sua — e ela aparece em todo cartão, tabela e CSV do portal. Agravos
+            sem coleta ficam marcados como pendentes: nenhum número é preenchido por estimativa
+            externa, média histórica ou zero.
+          </p>
+          <div data-reveal-stagger className="mt-8 grid gap-5 lg:grid-cols-2">
+            {LISTA_AGRAVOS.map((a) => {
+              const st = estadosAgravos.find((e) => e.id === a.id);
+              return (
+                <article key={a.id} className="card relative overflow-hidden p-6">
+                  <span aria-hidden className="absolute inset-y-0 left-0 w-1" style={{ background: a.cor }} />
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <h3 className="text-[1.3rem] leading-tight">{a.nomeCompleto}</h3>
+                    <Badge tone={st?.estado === "coletado" ? "ok" : st?.estado === "erro" ? "erro" : "neutro"}>
+                      {st?.estado === "coletado" ? `coletado · ${st.anoReferencia}` : st?.estado === "erro" ? "coleta falhou" : "aguardando coleta"}
+                    </Badge>
+                  </div>
+                  <p className="mt-3 text-[0.86rem] font-medium text-ink">{a.rotuloContagem}</p>
+                  <p className="mt-2 text-[0.82rem] leading-relaxed text-ink-soft">{a.definicao}</p>
+                  <dl className="mt-4 grid gap-x-6 gap-y-2 text-[0.76rem] sm:grid-cols-2">
+                    <div>
+                      <dt className="kicker">Sistema</dt>
+                      <dd className="mt-0.5 text-ink-soft">{a.sistema}</dd>
+                    </div>
+                    <div>
+                      <dt className="kicker">Método</dt>
+                      <dd className="mt-0.5 text-ink-soft">
+                        {a.metodoColeta === "censo" ? "Censo (todas as páginas)" : "Amostragem sistemática"}
+                      </dd>
+                    </div>
+                    <div className="sm:col-span-2">
+                      <dt className="kicker">Recurso</dt>
+                      <dd className="mono mt-0.5 break-all text-[0.7rem] text-ink-mute">{a.recurso}</dd>
+                    </div>
+                    <div className="sm:col-span-2">
+                      <dt className="kicker">Referência temporal</dt>
+                      <dd className="mono mt-0.5 text-[0.7rem] text-ink-mute">{a.referenciaTemporal}</dd>
+                    </div>
+                  </dl>
+                  <ul className="mt-4 space-y-1.5 border-t border-line pt-4 text-[0.78rem] leading-snug text-ink-soft">
+                    {a.limitacoes.map((l) => (
+                      <li key={l} className="flex gap-2">
+                        <span className="mt-[0.45rem] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                        {l}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
+          </div>
+          <div data-reveal className="mt-6">
+            <NotaMetodologica>
+              Dengue e Zika usam a definição de “caso provável” dos boletins de arboviroses do
+              Ministério da Saúde (notificações exceto descartadas). Como essas rotas não informam o
+              total de registros, o universo é medido por busca binária de páginas e a amostra é
+              estratificada por ano. Febre amarela é coletada inteira (censo): são casos humanos
+              confirmados, localizados pelo local provável de infecção. A regra de supressão
+              (&lt; 5 registros) esconde UFs com contagens muito baixas.
+            </NotaMetodologica>
           </div>
         </section>
 
